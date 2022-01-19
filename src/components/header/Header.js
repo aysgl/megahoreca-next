@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Header() {
     return (
-        <Navbar bg="white" variant="dark" expand="lg" className="py-0 shadow-sm" sticky="top" style={{ zIndex: "1046", height: "80px" }}>
+        <Navbar bg="white" variant="dark" expand="lg" className="py-0 shadow-sm mb-3" sticky="top" style={{ zIndex: "1046", height: "80px" }}>
             <Container className='h-100'>
                 <Navbar.Brand href="#home" className="mr-auto">
                     <Image

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react'
 import { Offcanvas, Button, Tab, Row, Col, Nav, Container } from 'react-bootstrap'
+import Link from "next/link"
 
 export default function Megamenu({ category }) {
     const [show, setShow] = useState(false);
@@ -57,7 +58,12 @@ export default function Megamenu({ category }) {
                                                             {cat.subCategories.map(sub =>
                                                                 <ul key={sub} className="list-unstyled lh-1">
                                                                     <li>
-                                                                        <a href="#" className="text-dark">{sub}</a>
+                                                                        <Link href={{
+                                                                            pathname: '/category/[slug]',
+                                                                            query: { slug: 'categorydetails' },
+                                                                        }}>
+                                                                            <a className="text-dark">{sub}</a>
+                                                                        </Link>
                                                                     </li>
                                                                 </ul>
                                                             )}

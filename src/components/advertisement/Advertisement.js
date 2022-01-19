@@ -9,14 +9,14 @@ export default function Advertisement() {
     return (
         <Container>
             <ul className="list-unstyled d-flex align-items-stretch">
-                <li className="list-inline-item">
-                    <Image className="img-fluid shadow rounded" alt="" src={banner1} placeholder="blur" width={500} height={400} />
+                <li className="list-inline-item shadow rounded">
+                    <Image className="img-fluid" alt="" src={banner1} blurDataURL="" placeholder="blur" width={500} height={400} objectFit="cover" />
                 </li>
-                <li className="list-inline-item">
-                    <Image className="img-fluid shadow rounded" alt="" src={banner2} placeholder="blur" width={500} height={400} />
+                <li className="list-inline-item shadow rounded">
+                    <Image className="img-fluid h-100" alt="" src={banner2} blurDataURL="" placeholder="blur" width={500} height={400} objectFit="cover" />
                 </li>
-                <li className="list-inline-item">
-                    <Image className="img-fluid shadow rounded d-none d-sm-none d-md-none d-lg-block" alt="" src={banner3} placeholder="blur" width={200} height={400} />
+                <li className="list-inline-item shadow rounded">
+                    <Image className="img-fluid d-none d-sm-none d-md-none d-lg-block" alt="" src={banner3} placeholder="blur" width={200} height={400} />
                 </li>
             </ul>
             <Seperate />

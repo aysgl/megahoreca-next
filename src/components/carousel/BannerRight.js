@@ -8,10 +8,10 @@ export default function BannerRight() {
         <div className="d-none d-lg-block">
             <div className="d-flex align-content-between flex-wrap h-100 bg-light rounded">
                 <div>
-                    <Image className="img-fluid p-3" src={bannerResponsiveText} placeholder="blur" alt="" width={100} height={100} />
+                    <Image className="img-fluid p-3" src={bannerResponsiveText} placeholder="blur" alt="" width={250} height={100} />
                 </div>
                 <div>
-                    <Image className="img-fluid" src={bannerResponsive} width={100} height={100} placeholder="blur" alt="" />
+                    <Image className="img-fluid" src={bannerResponsive} width={200} height={300} placeholder="blur" alt="" />
                 </div>
             </div>
         </div>
