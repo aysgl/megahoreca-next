@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Container, Breadcrumb, Row, Col, Card, Button, ListGroup, ListGroupItem, Accordion, Form, ButtonGroup, Dropdown, DropdownButton } from 'react-bootstrap';
+import { useRouter } from 'next/router'
+import useSWR from 'swr'
+import { Container, Card, Button, ListGroup, ListGroupItem, Accordion, Form, ButtonGroup, Dropdown, DropdownButton, Row, Col } from 'react-bootstrap';
 import ActionButton from '../../components/product/ActionButton';
 import SlickCard from '../../components/slick/SlickCard';
 import Seperate from '../../components/stuff/Seperate';
 import Link from "next/link"
-import { useRouter } from 'next/router'
-import useSWR from 'swr'
 
 const fetcher = async (url) => {
     const res = await fetch(url)
@@ -17,7 +17,7 @@ const fetcher = async (url) => {
     return data
 }
 
-export default function index({ slug }) {
+export default function CategoryDetails() {
     const [toggleViewMode, setToggleViewMode] = useState(false);
 
     const { query } = useRouter()
@@ -34,7 +34,7 @@ export default function index({ slug }) {
             <div className='mb-3'>
                 <Row className='d-flex align-items-center'>
                     <Col md={4}>
-                        <p className='mb-0 fw-bold'>Category Name</p>
+                        <p className='mb-0 fw-bold'>#{data.id} | {data.title}</p>
                     </Col>
                     <Col md={4} className='text-center'><span className='fw-bold'>0</span> search result</Col>
                     <Col className='text-end' md={4}>
@@ -237,5 +237,5 @@ export default function index({ slug }) {
             </Row>
             <Seperate />
         </Container >
-    );
+    )
 }

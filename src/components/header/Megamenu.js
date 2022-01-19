@@ -58,11 +58,8 @@ export default function Megamenu({ category }) {
                                                             {cat.subCategories.map(sub =>
                                                                 <ul key={sub} className="list-unstyled lh-1">
                                                                     <li className='small my-1'>
-                                                                        <Link href={{
-                                                                            pathname: '/category/[slug]',
-                                                                            query: { slug: 'categorydetails' },
-                                                                        }}>
-                                                                            <a className="text-dark">{sub}</a>
+                                                                        <Link href="/category/[id]" as={`/category/${cat.id}`}>
+                                                                            <a className='link-dark'>{sub}</a>
                                                                         </Link>
                                                                     </li>
                                                                 </ul>
