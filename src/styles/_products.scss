@@ -1,0 +1,21 @@
+.btn-favorite,
+.btn-cart {
+  color: $gray-400 !important;
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+.btn-favorite {
+  &:hover {
+    color: $pink !important;
+  }
+}
+.btn-cart {
+  &:hover {
+    color: $dark !important;
+  }
+}

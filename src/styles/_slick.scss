@@ -1,0 +1,15 @@
+.slick-slider {
+  /* the slides */
+  .slick-slider {
+    overflow: hidden;
+  }
+  /* the parent */
+  .slick-list {
+    margin: 0 -6px;
+    margin-right: -1px;
+  }
+  /* item */
+  .slick-slide {
+    padding: 0 6px;
+  }
+}
