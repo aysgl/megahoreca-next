@@ -1,7 +1,7 @@
-import { data } from '../../../data/data';
+import { megamenu } from '../../../data/megamenu'
 
 export default function personHandler({ query: { id } }, res) {
-  const filtered = data.filter((p) => p.id === id)
+  const filtered = megamenu.filter((p) => p.id === id)
 
   // User with id exists
   if (filtered.length > 0) {

@@ -2,7 +2,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import React from "react";
-import { megamenu } from "../../data/data"
+import { megamenu } from "../../data/megamenu"
 import FooterTopCategory from "./FooterTopCategory";
 
 export default function FooterSectionTop() {

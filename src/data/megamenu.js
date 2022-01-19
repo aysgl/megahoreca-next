@@ -1,6 +1,6 @@
 export const megamenu = [
     {
-        id: 1,
+        id: "1",
         title: "ASSORTIMENT",
         icon: "https://picsum.photos/650/650?random=12",
         img: "https://picsum.photos/650/650?random=1",
@@ -27,7 +27,7 @@ export const megamenu = [
         ]
     },
     {
-        id: 2,
+        id: "2",
         title: "TUIN",
         icon: "https://picsum.photos/650/650?random=13",
         img: "https://picsum.photos/650/650?random=2",
@@ -47,7 +47,7 @@ export const megamenu = [
         ]
     },
     {
-        id: 3,
+        id: "3",
         title: "GEREEDSCHAP",
         icon: "https://picsum.photos/650/650?random=14",
         img: "https://picsum.photos/650/650?random=3",
@@ -66,7 +66,7 @@ export const megamenu = [
         ]
     },
     {
-        id: 4,
+        id: "4",
         title: "BOUWMATERIALEN",
         icon: "https://picsum.photos/650/650?random=15",
         img: "https://picsum.photos/650/650?random=4",
@@ -95,7 +95,7 @@ export const megamenu = [
         ]
     },
     {
-        id: 5,
+        id: "5",
         title: "HOUT",
         icon: "https://picsum.photos/650/650?random=16",
         img: "https://picsum.photos/650/650?random=5",
@@ -109,7 +109,7 @@ export const megamenu = [
         ]
     },
     {
-        id: 6,
+        id: "6",
         title: "VERF & HOUTBESCHERMING",
         icon: "https://picsum.photos/650/650?random=17",
         img: "https://picsum.photos/650/650?random=6",
@@ -121,7 +121,7 @@ export const megamenu = [
         ]
     },
     {
-        id: 7,
+        id: "7",
         title: "SANITAIR",
         icon: "https://picsum.photos/650/650?random=18",
         img: "https://picsum.photos/650/650?random=7",
@@ -139,7 +139,7 @@ export const megamenu = [
         ]
     },
     {
-        id: 8,
+        id: "8",
         title: "ELEKTRICITEIT",
         icon: "https://picsum.photos/650/650?random=19",
         img: "https://picsum.photos/650/650?random=8",
@@ -153,7 +153,7 @@ export const megamenu = [
         ]
     },
     {
-        id: 9,
+        id: "9",
         title: "IJZERWAREN",
         icon: "https://picsum.photos/650/650?random=20",
         img: "https://picsum.photos/650/650?random=9",
@@ -170,7 +170,7 @@ export const megamenu = [
         ]
     },
     {
-        id: 10,
+        id: "10",
         title: "VERLICHTING",
         icon: "https://picsum.photos/650/650?random=21",
         img: "https://picsum.photos/650/650?random=10",
@@ -183,7 +183,7 @@ export const megamenu = [
         ]
     },
     {
-        id: 11,
+        id: "11",
         title: "VERWARMING",
         icon: "https://picsum.photos/650/650?random=22",
         img: "https://picsum.photos/650/650?random=11",

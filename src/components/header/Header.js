@@ -4,7 +4,7 @@ import DropdownCart from "./DropdownCart";
 import Search from "./Search";
 import logo from "../../images/logo.svg"
 import Megamenu from './Megamenu';
-import { megamenu } from "../../data/data"
+import { megamenu } from "../../data/megamenu"
 import Image from "next/image";
 
 export default function Header() {
