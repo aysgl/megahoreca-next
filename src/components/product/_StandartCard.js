@@ -26,8 +26,10 @@ export default function StandartCard({ title, category, point, price, stock, bad
                     }
 
                     {badge &&
-                        <div className="d-flex justify-content-end">
-                            <Badge badge={badge} />
+                        <div className="position-relative" style={{ zIndex: "1" }}>
+                            <div className="position-absolute">
+                                <Badge badge={badge} />
+                            </div>
                         </div>
                     }
                 </div>

@@ -9,13 +9,13 @@ export default function Advertisement() {
     return (
         <Container>
             <ul className="list-unstyled d-flex align-items-stretch">
-                <li className="list-inline-item shadow rounded">
+                <li className="list-inline-item shadow rounded d-flex overflow-hidden">
                     <Image className="img-fluid" alt="" src={banner1} blurDataURL="" placeholder="blur" width={500} height={400} objectFit="cover" />
                 </li>
-                <li className="list-inline-item shadow rounded">
+                <li className="list-inline-item shadow rounded d-flex overflow-hidden">
                     <Image className="img-fluid h-100" alt="" src={banner2} blurDataURL="" placeholder="blur" width={500} height={400} objectFit="cover" />
                 </li>
-                <li className="list-inline-item shadow rounded">
+                <li className="list-inline-item shadow rounded d-flex overflow-hidden">
                     <Image className="img-fluid d-none d-sm-none d-md-none d-lg-block" alt="" src={banner3} placeholder="blur" width={200} height={400} />
                 </li>
             </ul>

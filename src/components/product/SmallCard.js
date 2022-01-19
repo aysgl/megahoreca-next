@@ -36,8 +36,10 @@ export default function SmallCard({ title, category, point, price, stock, badge,
                     }
 
                     {badge &&
-                        <div className="d-flex justify-content-end position-relative" style={{ zIndex: "2" }}>
-                            <Badge badge={badge} />
+                        <div className="position-relative" style={{ zIndex: "1" }}>
+                            <div className="position-absolute">
+                                <Badge badge={badge} />
+                            </div>
                         </div>
                     }
                 </div>

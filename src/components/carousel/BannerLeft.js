@@ -9,16 +9,18 @@ export default function BannerLeft() {
         <div className="d-flex align-content-between flex-wrap h-100 border rounded p-2">
             <Row className="d-flex justify-content-between g-0">
                 <Col xs={9}>
-                    <p className="lh-sm mb-3">Aanbevolen Combinaties</p>
+                    <p className="lh-sm mb-3">Category name</p>
                 </Col>
-                <Col xs={3}>
+                <Col xs={3} className="text-end">
                     <SmallBadge />
                 </Col>
                 <Col xs={12} className="position-relative" style={{ zIndex: "1" }}>
-                    <Badge />
+                    <div className="position-absolute">
+                        <Badge />
+                    </div>
                 </Col>
             </Row>
-            <div>
+            <div className="d-flex overflow-hidden">
                 <Image className="img-fluid rounded" src="https://picsum.photos/200/300" width={200} height={300} alt="" />
             </div>
         </div>

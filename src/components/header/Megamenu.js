@@ -52,12 +52,12 @@ export default function Megamenu({ category }) {
                                     <Col sm={9}>
                                         <Tab.Content>
                                             {category.map(cat =>
-                                                <Tab.Pane key={cat.id} eventKey={cat.id}>
+                                                <Tab.Pane key={cat.id} eventKey={cat.id} className='bg-light rounded p-3'>
                                                     <Row style={{ zIndex: "1", position: "relative" }}>
                                                         <Col md={5}>
                                                             {cat.subCategories.map(sub =>
                                                                 <ul key={sub} className="list-unstyled lh-1">
-                                                                    <li>
+                                                                    <li className='small my-1'>
                                                                         <Link href={{
                                                                             pathname: '/category/[slug]',
                                                                             query: { slug: 'categorydetails' },
@@ -70,10 +70,11 @@ export default function Megamenu({ category }) {
                                                         </Col>
                                                         <Col md="7" className='text-end'>
                                                             <Image src={cat.img}
+                                                                className='rounded'
                                                                 alt=""
                                                                 width={650}
                                                                 height={650}
-                                                                layout='fixed'
+                                                                // layout='fixed'
                                                                 // unoptimized={true}
                                                                 placeholder="blur" />
                                                         </Col>

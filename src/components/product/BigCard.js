@@ -36,8 +36,10 @@ export default function BigCard({ title, category, point, price, stock, badge, i
                     }
 
                     {badge &&
-                        <div className="d-flex justify-content-end">
-                            <Badge badge={badge} />
+                        <div className="position-relative" style={{ zIndex: "1" }}>
+                            <div className="position-absolute">
+                                <Badge badge={badge} />
+                            </div>
                         </div>
                     }
                 </div>

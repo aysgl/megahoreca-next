@@ -38,15 +38,17 @@ const SlickCard = ({ stock, badge, title, category, id, price, point }) => {
                         }
 
                         {badge &&
-                            <div className="d-flex justify-content-end position-relative" style={{ zIndex: "1" }}>
-                                <Badge badge={badge} />
+                            <div className="position-relative" style={{ zIndex: "1" }}>
+                                <div className="position-absolute">
+                                    <Badge badge={badge} />
+                                </div>
                             </div>
                         }
                     </div>
                     <Image onClick={openModal} className="img-fluid rounded" src={`https://picsum.photos/id/${id}/200/200`} alt="" width={200} height={200} />
 
                     <SlickModal show={show} handleClose={closeModal} title={title}>
-                        <Image className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${id}/200/200`} width={200} height={200} alt="" />
+                        <Image className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${price}/800/800`} alt="" width={800} height={800} />
                     </SlickModal>
 
                 </Card.Body>

@@ -9,7 +9,7 @@ export default function FooterSectionBottom() {
                 <Row className="g-0">
                     <Col lg={12} xl={6}>
                         <Row className="g-0 mb-md-0 mb-4">
-                            <Col xl={5} md={12}>
+                            <Col xl={5} md={12} className="d-flex overflow-hidden">
                                 <Image className="img-fluid w-100 d-none d-xl-block pe-3" alt="Assistant" src={helpNodig} placeholder="blur" width={300} height={500} />
                             </Col>
                             <Col md={7} className="pt-4">

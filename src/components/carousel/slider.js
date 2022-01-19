@@ -22,16 +22,20 @@ export default function Slider() {
                     <Row>
                         <Col className="align-self-center m-2">
                             <div className="d-none d-lg-block">
-                                <Image className="img-fluid rounded" src={`https://picsum.photos/id/${i}/800/1200`} width={800} height={1200} alt="Product one" priority />
+                                <div className="d-flex overflow-hidden">
+                                    <Image className="img-fluid rounded" src={`https://picsum.photos/id/${i}/800/1200`} width={800} height={1200} alt="Product one" priority />
+                                </div>
                             </div>
                             <div className="d-lg-none">
-                                <Image className="img-fluid rounded" src={`https://picsum.photos/id/${i}/800/400`} width={800} height={400} alt="Product one" priority />
+                                <div className="d-flex overflow-hidden">
+                                    <Image className="img-fluid rounded" src={`https://picsum.photos/id/${i}/800/400`} width={800} height={400} alt="Product one" priority />
+                                </div>
                             </div>
                         </Col>
 
                         <Col md={8} className="align-self-center pe-5 m-2">
                             <div>
-                                <p className="text-black-30">{slide.id}# GARDEN</p>
+                                <p className="text-black-50">{slide.id}# GARDEN</p>
                                 <h1 className="fw-bold pe-5">{slide.title.substring(0, 30)}</h1>
                                 <p className="text-muted pb-3 pe-5">{slide.body.substring(0, 60)}</p>
                                 <Button variant="primary">SHOP
