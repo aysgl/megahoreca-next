@@ -16,6 +16,7 @@ export default function Header() {
                         src={logo}
                         alt="Megahoreca"
                         width={200}
+                        height={80}
                     />
                 </Navbar.Brand>
                 <Navbar.Toggle />

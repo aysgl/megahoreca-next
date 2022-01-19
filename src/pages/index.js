@@ -1,15 +1,14 @@
 import Head from 'next/head'
-
-// import Container from '../components/Container';
-// import Main from '../components/Main';
-// import Footer from '../components/Footer';
-// import Grid from '../components/Grid';
-// import Card from '../components/Card';
-import { Container, Button } from 'react-bootstrap';
+import Advertisement from '../components/advertisement/Advertisement'
+import PerksBanner from '../components/advertisement/PerksBanner'
+import SlickCarouselSection from '../components/slick/SlickCarouselSection'
+import ReviewCarouselSection from "../components/slick/ReviewCarouselSection"
+import MasonrySection from '../components/MasonrySection'
+import CarouselSection from '../components/carousel/sliderSection'
 
 export default function Home() {
   return (
-    <Container>
+    <>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -19,16 +18,13 @@ export default function Home() {
           content="Use Sass to start your Next.js app with CSS superpowers!"
         ></meta>
       </Head>
-
-      <main>
-        <h1>
-          MegaHoreca <Button variant='primary'>deneme</Button>
-        </h1>
-
-        <p >
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
-    </Container>
+      <CarouselSection />
+      <SlickCarouselSection title="PROMOTIES VAN DE WEEK" />
+      <Advertisement />
+      <MasonrySection api="https://jsonplaceholder.typicode.com/users" />
+      <SlickCarouselSection title="PROMOTIES VAN DE WEEK" />
+      <ReviewCarouselSection title="EERDER BEKEKEN DOOR JOU" />
+      <PerksBanner />
+    </>
   )
 }

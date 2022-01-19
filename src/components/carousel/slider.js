@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel'
-import mansetOne from "../../images/manset-one.png"
 import axios from "axios"
 import Image from "next/image";
 

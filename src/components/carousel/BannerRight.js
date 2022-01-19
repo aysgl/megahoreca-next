@@ -1,6 +1,6 @@
 import Col from "react-bootstrap/Col";
-import bannerResponsive from "../../images/banner-responsive.png"
-import bannerResponsiveText from "../../images/banner-responsive-text.png"
+import bannerResponsive from "../../images/bannerresponsive.jpg"
+import bannerResponsiveText from "../../images/bannerresponsivetext.jpg"
 import Image from "next/image";
 
 export default function BannerRight() {
@@ -8,10 +8,10 @@ export default function BannerRight() {
         <div className="d-none d-lg-block">
             <div className="d-flex align-content-between flex-wrap h-100 bg-light rounded">
                 <div>
-                    <Image className="img-fluid p-3" src={bannerResponsiveText} alt="" />
+                    <Image className="img-fluid p-3" src={bannerResponsiveText} placeholder="blur" alt="" width={100} height={100} />
                 </div>
                 <div>
-                    <Image className="img-fluid" src={bannerResponsive} alt="" />
+                    <Image className="img-fluid" src={bannerResponsive} width={100} height={100} placeholder="blur" alt="" />
                 </div>
             </div>
         </div>
