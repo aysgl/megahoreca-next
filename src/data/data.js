@@ -1,4 +1,4 @@
-export const CATEGORIES = [
+export const megamenu = [
     {
         id: 1,
         title: "ASSORTIMENT",

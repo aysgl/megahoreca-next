@@ -2,9 +2,6 @@ import Image from 'next/image';
 import { useState } from 'react'
 import { Offcanvas, Button, Tab, Row, Col, Nav, Container } from 'react-bootstrap'
 import Link from "next/link"
-import useSWR from 'swr'
-
-const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Megamenu({ category }) {
     const [show, setShow] = useState(false);
@@ -14,11 +11,6 @@ export default function Megamenu({ category }) {
     const hideDropdown = e => {
         setShow(false);
     }
-
-    const { data, error } = useSWR('/api/category', fetcher)
-
-    if (error) return <div>Failed to load</div>
-    if (!data) return <div>Loading...</div>
 
     return (
         <>
@@ -67,7 +59,7 @@ export default function Megamenu({ category }) {
                                                                 <ul key={sub} className="list-unstyled lh-1">
                                                                     <li className='small my-1'>
                                                                         <Link href={{
-                                                                            pathname: '/category/[id]',
+                                                                            pathname: '/category/[slug]',
                                                                             query: { slug: 'categorydetails' },
                                                                         }}>
                                                                             <a className="text-dark">{sub}</a>
