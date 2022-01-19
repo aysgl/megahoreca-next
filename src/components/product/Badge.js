@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap'
 
 export default function Badge({ badge }) {
     return (
-        <div className="percent-tag-blue bg-primary d-flex justify-content-center">
+        <div className="percent-tag-blue bg-primary">
             <div className="percent-tag__content p-1">
                 <div style={{ width: "88px" }} className="bg-white rounded text-end p-1">
                     <span className="fw-light text-black-50 mb-0 lh-1">

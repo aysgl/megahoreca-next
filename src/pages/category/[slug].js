@@ -1,20 +1,15 @@
 import { useState } from 'react';
-import { Container, Breadcrumb, Row, Col, Card, Button, ListGroup, ListGroupItem, Accordion, Form, ButtonGroup, FloatingLabel, Dropdown, DropdownButton } from 'react-bootstrap';
+import { Container, Breadcrumb, Row, Col, Card, Button, ListGroup, ListGroupItem, Accordion, Form, ButtonGroup, Dropdown, DropdownButton } from 'react-bootstrap';
 import ActionButton from '../../components/product/ActionButton';
+import SlickCard from '../../components/slick/SlickCard';
 import Seperate from '../../components/stuff/Seperate';
+import Link from "next/link"
 
 export default function index({ slug }) {
     const [toggleViewMode, setToggleViewMode] = useState(false);
 
     return (
         <Container>
-            <Breadcrumb>
-                <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-                <Breadcrumb.Item href="#.">
-                    Library
-                </Breadcrumb.Item>
-                <Breadcrumb.Item active>Category detay sayfasıdır</Breadcrumb.Item>
-            </Breadcrumb>
             <div className='mb-3'>
                 <Row className='d-flex align-items-center'>
                     <Col md={4}>
@@ -23,14 +18,6 @@ export default function index({ slug }) {
                     <Col md={4} className='text-center'><span className='fw-bold'>0</span> search result</Col>
                     <Col className='text-end' md={4}>
                         <div className='d-flex justify-content-end'>
-                            {/* <FloatingLabel className='me-2' controlId="floatingSelect" label="Sorting options">
-                                <Form.Select aria-label="Floating label select example">
-                                    <option>Select item</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </Form.Select>
-                            </FloatingLabel> */}
                             <DropdownButton
                                 size="sm"
                                 className='me-2'
@@ -55,73 +42,84 @@ export default function index({ slug }) {
                 </Row>
             </div>
 
-            {toggleViewMode ?
-                "grid hazırlanacak" :
-                <Row className='g-3'>
-                    <Col md={3}>
-                        <Accordion defaultActiveKey={['0']} alwaysOpen>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header>Category filter</Accordion.Header>
-                                <Accordion.Body>
-                                    <Form>
-                                        <Form.Group controlId="formBasicCheckbox1">
-                                            <Form.Check type="checkbox" id="formBasicCheckbox1" label="Check me out" />
-                                        </Form.Group>
-                                        <Form.Group controlId="formBasicCheckbox2">
-                                            <Form.Check type="checkbox" id="formBasicCheckbox2" label="Check me out" />
-                                        </Form.Group>
-                                    </Form>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="1">
-                                <Accordion.Header>Price</Accordion.Header>
-                                <Accordion.Body>
-                                    <Form.Label>Price range</Form.Label>
-                                    <Form.Range />
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="2">
-                                <Accordion.Header>Pick color</Accordion.Header>
-                                <Accordion.Body>
-                                    <div class="row">
+            <Row className='g-3'>
+                <Col md={3}>
+                    <Accordion defaultActiveKey={['0']} alwaysOpen>
+                        <Accordion.Item eventKey="0">
+                            <Accordion.Header>Category filter</Accordion.Header>
+                            <Accordion.Body>
+                                <Form>
+                                    <Form.Group controlId="formBasicCheckbox1">
+                                        <Form.Check type="checkbox" id="formBasicCheckbox1" label="Check me out" />
+                                    </Form.Group>
+                                    <Form.Group controlId="formBasicCheckbox2">
+                                        <Form.Check type="checkbox" id="formBasicCheckbox2" label="Check me out" />
+                                    </Form.Group>
+                                </Form>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="1">
+                            <Accordion.Header>Price</Accordion.Header>
+                            <Accordion.Body>
+                                <Form.Label>Price range</Form.Label>
+                                <Form.Range />
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="2">
+                            <Accordion.Header>Pick color</Accordion.Header>
+                            <Accordion.Body>
+                                <div class="row">
 
-                                        <div class="col-md-4">
-                                            <div class="p-3 mb-3 bg-primary text-white">Primary</div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="p-3 mb-3 bg-secondary text-white">Secondary</div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="p-3 mb-3 bg-success text-white">Success</div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="p-3 mb-3 bg-danger text-white">Danger</div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="p-3 mb-3 bg-warning text-dark">Warning</div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="p-3 mb-3 bg-info text-dark">Info</div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="p-3 mb-3 bg-light text-dark">Light</div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="p-3 mb-3 bg-dark text-white">Dark</div>
-                                        </div>
-
+                                    <div class="col-md-4">
+                                        <div class="p-3 mb-3 bg-primary text-white">Primary</div>
                                     </div>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
+
+                                    <div class="col-md-4">
+                                        <div class="p-3 mb-3 bg-secondary text-white">Secondary</div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="p-3 mb-3 bg-success text-white">Success</div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="p-3 mb-3 bg-danger text-white">Danger</div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="p-3 mb-3 bg-warning text-dark">Warning</div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="p-3 mb-3 bg-info text-dark">Info</div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="p-3 mb-3 bg-light text-dark">Light</div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="p-3 mb-3 bg-dark text-white">Dark</div>
+                                    </div>
+
+                                </div>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                </Col>
+                {toggleViewMode ?
+                    <Col md={9}>
+                        <Row>
+                            <Col md={4}>
+                                <Link href="/product">
+                                    <a>
+                                        <SlickCard />
+                                    </a>
+                                </Link>
+                            </Col>
+                        </Row>
                     </Col>
+                    :
                     <Col md={9}>
                         <Card className='mb-3'>
                             <Row className='d-flex align-items-center g-0'>
@@ -214,9 +212,8 @@ export default function index({ slug }) {
                             </Row>
                         </Card>
                     </Col>
-                </Row>
-            }
-
+                }
+            </Row>
             <Seperate />
         </Container >
     );

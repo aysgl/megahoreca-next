@@ -521,9 +521,10 @@ ins {
   }
 
   .percent-tag-blue {
-    position: absolute;
+    position: relative;
     width: 6rem;
     height: 6rem;
+    margin-bottom: 3rem;
     border-radius: 4px;
     background: $primary;
     &:before {
