@@ -6,6 +6,7 @@ import Stars from "./Stars"
 import ActionButton from "./ActionButton"
 import SlickModal from "../slick/SlickModal"
 import Image from "next/image"
+import CategoryBreadcrumb from "../slick/CategoryBreadcrumb"
 
 export default function SmallCard({ title, category, point, price, stock, badge, id }) {
     const [show, setShow] = useState(false);
@@ -20,11 +21,7 @@ export default function SmallCard({ title, category, point, price, stock, badge,
         <Card className="w-100 h-100">
             <Card.Body>
                 <div style={{ minHeight: "110px" }}>
-                    <p className="text-black-50 mb-1 d-flex align-items-center small text-truncate">
-                        <i style={{ fontSize: "9px" }} className="icon-surface1-44 pe-2" />
-                        category
-                        <i style={{ fontSize: "9px" }} className="icon-surface1-44 px-2" /> {category}
-                    </p>
+                    <CategoryBreadcrumb category={category} />
                     <Card.Title className="mb-1 fw-bold h6">{title}</Card.Title>
 
                     {stock &&

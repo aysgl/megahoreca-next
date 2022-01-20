@@ -5,6 +5,7 @@ import ActionButton from "../product/ActionButton";
 import Badge from "../product/Badge";
 import Stars from "../product/Stars";
 import Stock from "../product/Stock";
+import CategoryBreadcrumb from "./CategoryBreadcrumb";
 import SlickModal from "./SlickModal";
 
 const SlickCard = ({ stock, badge, title, category, id, price, point }) => {
@@ -22,11 +23,7 @@ const SlickCard = ({ stock, badge, title, category, id, price, point }) => {
             <Card className="mb-4" style={{ cursor: "pointer" }}>
                 <Card.Body>
                     <div style={{ minHeight: "110px" }}>
-                        <p className="text-black-50 mb-1 d-flex align-items-center small text-truncate">
-                            <i style={{ fontSize: "9px" }} className="icon-surface1-44 pe-2" />
-                            category
-                            <i style={{ fontSize: "9px" }} className="icon-surface1-44 px-2" /> {category}
-                        </p>
+                        <CategoryBreadcrumb category={category} />
                         <Card.Title className="mb-1 fw-bold h6">{title}</Card.Title>
 
                         {stock &&

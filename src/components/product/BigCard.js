@@ -6,6 +6,7 @@ import Stock from "./Stock"
 import ActionButton from "./ActionButton"
 import SlickModal from "../slick/SlickModal"
 import Image from "next/image"
+import CategoryBreadcrumb from "../slick/CategoryBreadcrumb"
 
 export default function BigCard({ title, category, point, price, stock, badge, id }) {
     const [show, setShow] = useState(false);
@@ -20,11 +21,7 @@ export default function BigCard({ title, category, point, price, stock, badge, i
         <Card className="w-100 h-100">
             <Card.Body>
                 <div>
-                    <p className="text-black-50 mb-1 d-flex align-items-center small text-truncate">
-                        <i style={{ fontSize: "9px" }} className="icon-surface1-44 pe-2" />
-                        category
-                        <i style={{ fontSize: "9px" }} className="icon-surface1-44 px-2" /> {category}
-                    </p>
+                    <CategoryBreadcrumb category={category} />
                     <Card.Title as="h3" className="mb-1 fw-bold">{title + " lorem ispum sit amet dolor for big card"}</Card.Title>
 
                     {stock &&
