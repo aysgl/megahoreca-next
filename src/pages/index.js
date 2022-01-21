@@ -39,10 +39,11 @@ export default function Home() {
       <SlickCarouselSection title="PROMOTIES VAN DE WEEK" />
       <Advertisement />
       {prodata && catdata &&
-        <MasonrySection prodata={prodata} catdata={catdata} />
+        <MasonrySection title="Ontdek onze products" prodata={prodata} catdata={catdata} />
       }
 
       <Container>
+        <p className="text-uppercase text-center title">Ontdek onze categorien</p>
         <Row xs={3} md={6} lg={8} className='g-3'>
           {catdata.map((c, i) => (
             <CategoryListSmall key={i} cat={c} subcat={c} />

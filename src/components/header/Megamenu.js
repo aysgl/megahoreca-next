@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useState } from 'react'
-import { Offcanvas, Button, Tab, Row, Col, Nav, Container } from 'react-bootstrap'
+import { Offcanvas, Button, Tab, Row, Col, Nav, Container, Card } from 'react-bootstrap'
 import Link from "next/link"
 
 export default function Megamenu({ category }) {
@@ -37,9 +37,9 @@ export default function Megamenu({ category }) {
                                             {category.map(cat =>
                                                 <Nav.Item key={cat.id}>
                                                     <Nav.Link eventKey={cat.id} className='position-relative'>
-                                                        <img className='rounded-circle mx-2'
-                                                            width={20}
-                                                            height={20}
+                                                        <img className='rounded mx-2'
+                                                            width={40}
+                                                            height={40}
                                                             placeholder="blur"
                                                             layout='intrinsic'
                                                             src={cat.icon} alt="" />
@@ -52,20 +52,26 @@ export default function Megamenu({ category }) {
                                     <Col sm={9}>
                                         <Tab.Content>
                                             {category.map(cat =>
-                                                <Tab.Pane key={cat.id} eventKey={cat.id} className='border rounded rounded p-3'>
-                                                    <Row style={{ zIndex: "1", position: "relative" }}>
-                                                        <Col md={5}>
-                                                            {cat.subcategory.map(sub =>
-                                                                <ul key={sub.id} className="list-unstyled lh-1">
-                                                                    <li className='small my-1'>
-                                                                        <Link href="/category/[id]" as={`/category/${cat.id}`}>
-                                                                            <a className='link-dark'>{sub.title}</a>
-                                                                        </Link>
-                                                                    </li>
-                                                                </ul>
-                                                            )}
-                                                        </Col>
-                                                        <Col md="7" className='text-end'>
+                                                <Tab.Pane key={cat.id} eventKey={cat.id}>
+                                                    <Row style={{ zIndex: "1", position: "relative" }} className='g-2'>
+                                                        {cat.subcategory.map(sub =>
+                                                            <Col md={2}>
+                                                                <Card className="category-card text-white">
+                                                                    <Card.Img src={cat.img} alt="Card image" />
+                                                                    <Link href="/category/[id]" as={`/category/${cat.id}`}>
+                                                                        <a className='link-dark'>
+                                                                            <Card.ImgOverlay className='d-flex align-items-center justify-content-center'>
+                                                                                <Card.Title as="p" className='text-center text-white fw-bold small'>
+                                                                                    {sub.title}
+                                                                                </Card.Title>
+                                                                            </Card.ImgOverlay>
+                                                                        </a>
+                                                                    </Link>
+                                                                </Card>
+                                                            </Col>
+                                                        )}
+
+                                                        {/* <Col md="7" className='text-end'>
                                                             <Image src={cat.img}
                                                                 className='rounded'
                                                                 alt=""
@@ -74,7 +80,7 @@ export default function Megamenu({ category }) {
                                                                 // layout='fixed'
                                                                 // unoptimized={true}
                                                                 placeholder="blur" />
-                                                        </Col>
+                                                        </Col> */}
                                                     </Row>
                                                 </Tab.Pane>
                                             )}

@@ -5,7 +5,7 @@ import axios from "axios";
 import BigCard from "./product/BigCard";
 import SmallCard from "./product/SmallCard";
 
-export default function MasonrySection({ prodata, catdata }) {
+export default function MasonrySection({ prodata, catdata, title }) {
     // const [products, setProducts] = useState(null);
 
     // useEffect(() => {
@@ -19,6 +19,7 @@ export default function MasonrySection({ prodata, catdata }) {
     return (
         <>
             <Container>
+                <p className="text-uppercase text-center title">{title}</p>
                 {catdata &&
                     <Row className="g-3">
                         {prodata.filter(x => x.id == 1).map((pro, i) =>
