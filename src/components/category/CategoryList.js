@@ -6,41 +6,36 @@ import Image from 'next/image';
 export default function CategoryList({ cat }) {
     // console.log(cat);
     return (
-        <Card className='h-100'>
+        <Card className='h-100 mb-3'>
             <Card.Body>
-                <Row className="mb-3">
-                    <Col sm={7}>
-                        <Row className='g-0'>
-                            <Col sm={2}>
-                                <Image className='rounded-circle'
-                                    width={30}
-                                    height={30}
-                                    placeholder="blur"
-                                    layout='intrinsic'
-                                    src={cat.icon} alt="" />
-                            </Col>
-                            <Col sm={10}>
-                                <p className='fw-bold pt-1'>{cat.title}</p>
-                                <ul className="list-unstyled">
-                                    {cat.subcategory.map((sub, i) =>
-                                        <li key={i} className='my-1'>
-                                            <Link href="/category/[id]" as={`/category/${cat.id}`}>
-                                                <a className='link-dark'>{sub.title}</a>
-                                            </Link>
-                                        </li>
-                                    )}
-                                </ul>
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col sm={5}>
-                        <Image src={cat.img}
-                            className='rounded'
-                            alt=""
-                            width={650}
-                            height={650}
-                            placeholder="blur" />
-                    </Col>
+                <div className='d-flex align-items-center'>
+                    <div>
+                        <Image className='rounded'
+                            width={40}
+                            height={40}
+                            placeholder="blur"
+                            layout='intrinsic'
+                            src={cat.icon} alt="" />
+                    </div>
+                    <p className='fw-bold ms-2 mb-0'>{cat.title}</p>
+
+                </div>
+
+                <Row className="g-2">
+                    {cat.subcategory.map((sub, i) =>
+                        <Col md={2}>
+                            <Card className="category-card text-white">
+                                <Card.Img src={cat.img} alt="Card image" />
+                                <Link href="/category/[id]" as={`/category/${cat.id}`}>
+                                    <a className='link-dark'>
+                                        <Card.ImgOverlay className='d-flex align-items-center justify-content-center'>
+                                            <Card.Title as="p" className='text-center text-white fw-bold small'>{sub.title}</Card.Title>
+                                        </Card.ImgOverlay>
+                                    </a>
+                                </Link>
+                            </Card>
+                        </Col>
+                    )}
                 </Row>
             </Card.Body>
         </Card>

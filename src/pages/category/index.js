@@ -13,13 +13,9 @@ export default function Index() {
 
     return (
         <Container>
-            <Row className='g-3'>
-                {catdata.map((p, i) => (
-                    <Col md={6}>
-                        <CategoryList key={i} cat={p} subcat={p} />
-                    </Col>
-                ))}
-            </Row>
+            {catdata.map((p, i) => (
+                <CategoryList key={i} cat={p} subcat={p} />
+            ))}
             <Seperate />
         </Container>
     )

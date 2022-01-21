@@ -2,8 +2,8 @@ export const catdata = [
     {
         id: "1",
         title: "ASSORTIMENT",
-        icon: "https://picsum.photos/650/650?random=12",
-        img: "https://picsum.photos/650/650?random=1",
+        icon: "https://picsum.photos/800/400?random=12",
+        img: "https://picsum.photos/800/400?random=1",
         subcategory: [
             {
                 id: "1",
@@ -86,8 +86,8 @@ export const catdata = [
     {
         id: "2",
         title: "TUIN",
-        icon: "https://picsum.photos/650/650?random=13",
-        img: "https://picsum.photos/650/650?random=2",
+        icon: "https://picsum.photos/800/400?random=13",
+        img: "https://picsum.photos/800/400?random=2",
         subcategory: [
             {
                 id: "1",
@@ -142,8 +142,8 @@ export const catdata = [
     {
         id: "3",
         title: "GEREEDSCHAP",
-        icon: "https://picsum.photos/650/650?random=14",
-        img: "https://picsum.photos/650/650?random=3",
+        icon: "https://picsum.photos/800/400?random=14",
+        img: "https://picsum.photos/800/400?random=3",
         subcategory: [
             {
                 id: "1",
@@ -194,8 +194,8 @@ export const catdata = [
     {
         id: "4",
         title: "BOUWMATERIALEN",
-        icon: "https://picsum.photos/650/650?random=15",
-        img: "https://picsum.photos/650/650?random=4",
+        icon: "https://picsum.photos/800/400?random=15",
+        img: "https://picsum.photos/800/400?random=4",
         subcategory: [
             {
                 id: "1",
@@ -287,8 +287,8 @@ export const catdata = [
     {
         id: "5",
         title: "HOUT",
-        icon: "https://picsum.photos/650/650?random=16",
-        img: "https://picsum.photos/650/650?random=5",
+        icon: "https://picsum.photos/800/400?random=16",
+        img: "https://picsum.photos/800/400?random=5",
         subcategory: [
             {
                 id: "1",
@@ -319,8 +319,8 @@ export const catdata = [
     {
         id: "6",
         title: "VERF & HOUTBESCHERMING",
-        icon: "https://picsum.photos/650/650?random=17",
-        img: "https://picsum.photos/650/650?random=6",
+        icon: "https://picsum.photos/800/400?random=17",
+        img: "https://picsum.photos/800/400?random=6",
         subcategory: [
             {
                 id: "1",
@@ -343,8 +343,8 @@ export const catdata = [
     {
         id: "7",
         title: "SANITAIR",
-        icon: "https://picsum.photos/650/650?random=18",
-        img: "https://picsum.photos/650/650?random=7",
+        icon: "https://picsum.photos/800/400?random=18",
+        img: "https://picsum.photos/800/400?random=7",
         subcategory: [
             {
                 id: "1",
@@ -391,8 +391,8 @@ export const catdata = [
     {
         id: "8",
         title: "ELEKTRICITEIT",
-        icon: "https://picsum.photos/650/650?random=19",
-        img: "https://picsum.photos/650/650?random=8",
+        icon: "https://picsum.photos/800/400?random=19",
+        img: "https://picsum.photos/800/400?random=8",
         subcategory: [
             {
                 id: "1",
@@ -423,8 +423,8 @@ export const catdata = [
     {
         id: "9",
         title: "IJZERWAREN",
-        icon: "https://picsum.photos/650/650?random=20",
-        img: "https://picsum.photos/650/650?random=9",
+        icon: "https://picsum.photos/800/400?random=20",
+        img: "https://picsum.photos/800/400?random=9",
         subcategory: [
             {
                 id: "1",
@@ -467,8 +467,8 @@ export const catdata = [
     {
         id: "10",
         title: "VERLICHTING",
-        icon: "https://picsum.photos/650/650?random=21",
-        img: "https://picsum.photos/650/650?random=10",
+        icon: "https://picsum.photos/800/400?random=21",
+        img: "https://picsum.photos/800/400?random=10",
         subcategory: [
             {
                 id: "1",
@@ -495,8 +495,8 @@ export const catdata = [
     {
         id: "11",
         title: "VERWARMING",
-        icon: "https://picsum.photos/650/650?random=22",
-        img: "https://picsum.photos/650/650?random=11",
+        icon: "https://picsum.photos/800/400?random=22",
+        img: "https://picsum.photos/800/400?random=11",
         subcategory: [
             {
                 id: "1",
