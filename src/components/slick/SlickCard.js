@@ -21,6 +21,13 @@ const SlickCard = ({ stock, badge, title, category, id, price, point }) => {
     return (
         <>
             <Card className="mb-4" style={{ cursor: "pointer" }}>
+                {badge &&
+                    <div className="position-relative" style={{ zIndex: "1" }}>
+                        <div className="position-absolute end-0">
+                            <BigBadge badge={badge} />
+                        </div>
+                    </div>
+                }
                 <Image onClick={openModal} className="img-fluid rounded" src={`https://picsum.photos/id/${id}/200/200`} alt="" width={200} height={200} />
 
                 <SlickModal show={show} handleClose={closeModal} title={title}>
@@ -41,13 +48,7 @@ const SlickCard = ({ stock, badge, title, category, id, price, point }) => {
                             <Stars point={point} />
                         }
 
-                        {badge &&
-                            <div className="position-relative" style={{ zIndex: "1" }}>
-                                <div className="position-absolute end-0">
-                                    <BigBadge badge={badge} />
-                                </div>
-                            </div>
-                        }
+
                     </div>
                 </Card.Body>
                 <Card.Footer className="border-0">

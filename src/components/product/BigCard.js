@@ -22,6 +22,19 @@ export default function BigCard({ title, catdata, prodata, stars, price, stock, 
     console.log("title " + catTitle);
     return (
         <Card className="w-100 h-100">
+            {badge === 0 ? null :
+                <div className="position-relative" style={{ zIndex: "1" }}>
+                    <div className="position-absolute end-0">
+                        <BigBadge badge={badge} discount={discount} />
+                    </div>
+                </div>
+            }
+            <Image onClick={openModal} className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${id}/600/400`} width={600} height={400} layout="responsive" alt="" />
+
+            <SlickModal show={show} handleClose={closeModal} title={title}>
+                <Image className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${id}/800/800`} alt="" width={800} height={800} />
+            </SlickModal>
+
             <Card.Body>
                 <div>
                     {/* <CategoryBreadcrumb catdata={catdata} /> */}
@@ -38,20 +51,10 @@ export default function BigCard({ title, catdata, prodata, stars, price, stock, 
                         <Stars stars={stars} />
                     }
 
-                    {badge === 0 ? null :
-                        <div className="position-relative" style={{ zIndex: "1" }}>
-                            <div className="position-absolute end-0">
-                                <BigBadge badge={badge} discount={discount} />
-                            </div>
-                        </div>
-                    }
+
                 </div>
 
-                <Image onClick={openModal} className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${id}/600/400`} width={600} height={400} layout="responsive" alt="" />
 
-                <SlickModal show={show} handleClose={closeModal} title={title}>
-                    <Image className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${id}/800/800`} alt="" width={800} height={800} />
-                </SlickModal>
             </Card.Body>
 
             <Card.Footer className="border-0">
