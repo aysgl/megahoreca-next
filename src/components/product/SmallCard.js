@@ -22,8 +22,9 @@ export default function SmallCard({ title, category, prodata, stars, price, stoc
         <Card className="w-100 h-100">
             <Card.Body>
                 <div style={{ minHeight: "110px" }}>
-                    <CategoryBreadcrumb id={id} catId={catId} catTitle={catTitle}
-                        catSubcat={catSubcat} />
+                    {/* <CategoryBreadcrumb id={id} catId={catId} catTitle={catTitle}
+                        catSubcat={catSubcat} /> */}
+                    <CategoryBreadcrumb />
 
                     <Card.Title className="mb-1 fw-bold h6">{title}</Card.Title>
 

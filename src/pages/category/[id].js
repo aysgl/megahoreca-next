@@ -151,10 +151,11 @@ export default function CategoryDetails() {
                                 </Col>
                                 <Col md={8}>
                                     <Card.Body>
-                                        <CategoryBreadcrumb
+                                        {/* <CategoryBreadcrumb
                                             category={catdata.title}
                                             subcat={catdata}
-                                        />
+                                        /> */}
+                                        <CategoryBreadcrumb />
                                         <Card.Title as="h3">Product name 1 - Lorem ipsum sit amet</Card.Title>
                                         <Card.Text>
                                             <Row>

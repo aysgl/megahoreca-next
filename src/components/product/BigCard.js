@@ -26,7 +26,7 @@ export default function BigCard({ title, catdata, prodata, stars, price, stock, 
                 <div>
                     {/* <CategoryBreadcrumb catdata={catdata} /> */}
                     {/* <CategoryBreadcrumb catdata={catdata == id ? "eşit değil" : catTitle} /> */}
-                    <CategoryBreadcrumb id={id} catId={catId} catTitle={catTitle} catSubcat={catSubcat} />
+                    <CategoryBreadcrumb />
 
                     <Card.Title as="h3" className="mb-1 fw-bold">{title}</Card.Title>
 

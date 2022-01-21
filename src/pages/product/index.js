@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Alert, ListGroup, ListGroupItem, Tabs, Tab } from 'react-bootstrap';
 import ActionButton from '../../components/product/ActionButton';
-import BigBadge from '../../components/product/Badge';
+import BigBadge from '../../components/product/BigBadge';
 import Stars from '../../components/product/Stars';
 import Stock from '../../components/product/Stock';
 import SlickGallery from '../../components/slick/SlickGallery';
