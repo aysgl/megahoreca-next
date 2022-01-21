@@ -1,30 +1,28 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap'
 import useSWR from 'swr'
+import CategoryList from '../../../components/category/CategoryList'
+import Seperate from '../../../components/stuff/Seperate'
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
+const fetcherCat = (url) => fetch(url).then((res) => res.json())
+const fetcherPro = (url) => fetch(url).then((res) => res.json())
 
 export default function Index() {
-    const { data, error } = useSWR('/api/category/', fetcher)
-    console.log(data);
-    if (error) return <div>Failed to load subcategory index</div>
-    if (!data) return <div>Loading subcategory index...</div>
+    const { data: catdata, error: caterror } = useSWR('/api/category', fetcherCat)
+    const { data: prodata, error: proerror } = useSWR('/api/product', fetcherPro)
+
+    if (caterror) return <div>Failed to load</div>
+    if (!catdata) return <div>Loading cat...</div>
+
+    if (proerror) return <div>Failed to load</div>
+    if (!prodata) return <div>Loading cat...</div>
+
     return (
-        <Container className='mb-5'>
-            Subcategory index
-            <ul>
-                {data.map(p =>
-                    <li>
-                        {p.title} {p.id}
-                        <ul>
-                            {p.subcategory.map(s =>
-                                <li>{s.title}</li>
-                            )}
-                        </ul>
-                    </li>
-                )}
-            </ul>
-            {/* {data.id}# {data.title} */}
+        <Container>
+            {/* {catdata.map((p, i) => (
+                <CategoryList key={i} cat={p} subcat={p} />
+            ))} */}
+            <CategoryList catdata={catdata} />
+            <Seperate />
         </Container>
-    );
+    )
 }

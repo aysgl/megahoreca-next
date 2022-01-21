@@ -1,4 +1,4 @@
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import useSWR from 'swr'
 import CategoryList from '../../components/category/CategoryList'
 import Seperate from '../../components/stuff/Seperate'
@@ -13,9 +13,10 @@ export default function Index() {
 
     return (
         <Container>
-            {catdata.map((p, i) => (
+            {/* {catdata.map((p, i) => (
                 <CategoryList key={i} cat={p} subcat={p} />
-            ))}
+            ))} */}
+            <CategoryList catdata={catdata} />
             <Seperate />
         </Container>
     )

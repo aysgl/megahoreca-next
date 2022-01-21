@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useState } from 'react'
 import { Offcanvas, Button, Tab, Row, Col, Nav, Container, Card } from 'react-bootstrap'
 import Link from "next/link"
@@ -11,7 +10,7 @@ export default function Megamenu({ category }) {
     const hideDropdown = e => {
         setShow(false);
     }
-
+    const url = "category/subcategory/[id]"
     return (
         <>
             <Button className='w-25 text-secondary text-uppercase fw-bold h-100 p-0'
@@ -55,10 +54,13 @@ export default function Megamenu({ category }) {
                                                 <Tab.Pane key={cat.id} eventKey={cat.id}>
                                                     <Row style={{ zIndex: "1", position: "relative" }} className='g-2'>
                                                         {cat.subcategory.map(sub =>
-                                                            <Col md={2}>
+                                                            <Col lg={3} sm={4}>
                                                                 <Card className="category-card text-white">
                                                                     <Card.Img src={cat.img} alt="Card image" />
-                                                                    <Link href="/category/[id]" as={`/category/${cat.id}`}>
+                                                                    <Link
+                                                                        href="/category/subcategory/[id]"
+                                                                        as={`/category/subcategory/${sub.id}`}
+                                                                    >
                                                                         <a className='link-dark'>
                                                                             <Card.ImgOverlay className='d-flex align-items-center justify-content-center'>
                                                                                 <Card.Title as="p" className='text-center text-white fw-bold small mb-0'>

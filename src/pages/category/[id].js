@@ -133,13 +133,15 @@ export default function CategoryDetails() {
                 {toggleViewMode ?
                     <Col md={9}>
                         <Row>
-                            <Col md={4}>
-                                <Link href="/product">
-                                    <a>
-                                        <SlickCard />
-                                    </a>
-                                </Link>
-                            </Col>
+                            {prodata.map((pro, i) =>
+                                <Col md={4}>
+                                    <Link href="/product/[id]" as={`/product/${pro.id}`} >
+                                        <a>
+                                            <SlickCard />
+                                        </a>
+                                    </Link>
+                                </Col>
+                            )}
                         </Row>
                     </Col>
                     :
