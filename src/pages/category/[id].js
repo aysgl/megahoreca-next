@@ -23,13 +23,13 @@ export default function CategoryDetails() {
     const [toggleViewMode, setToggleViewMode] = useState(false);
 
     const { query } = useRouter()
-    const { catdata, error } = useSWR(
+    const { data: catdata, error } = useSWR(
         () => query.id && `/api/category/${query.id}`,
         fetcher
     )
 
     if (error) return <div>{error.message}</div>
-    if (!catdata) return <div>Loading data...</div>
+    if (!catdata) return <div>Loading data cat data...</div>
 
     return (
         <Container>

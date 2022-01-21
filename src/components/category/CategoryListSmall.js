@@ -11,9 +11,7 @@ export default function CategoryListSmall({ cat }) {
                 <Link href="/category/[id]" as={`/category/${cat.id}`}>
                     <a className='link-dark'>
                         <Card.ImgOverlay className='d-flex align-items-center justify-content-center'>
-
                             <Card.Title as="p" className='text-center text-white fw-bold'>{cat.title}</Card.Title>
-
                         </Card.ImgOverlay>
                     </a>
                 </Link>
