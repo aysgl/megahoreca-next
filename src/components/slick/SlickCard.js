@@ -21,6 +21,12 @@ const SlickCard = ({ stock, badge, title, category, id, price, point }) => {
     return (
         <>
             <Card className="mb-4" style={{ cursor: "pointer" }}>
+                <Image onClick={openModal} className="img-fluid rounded" src={`https://picsum.photos/id/${id}/200/200`} alt="" width={200} height={200} />
+
+                <SlickModal show={show} handleClose={closeModal} title={title}>
+                    <Image className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${price}/800/800`} alt="" width={800} height={800} />
+                </SlickModal>
+
                 <Card.Body>
                     <div style={{ minHeight: "110px" }}>
                         <CategoryBreadcrumb />
@@ -43,12 +49,6 @@ const SlickCard = ({ stock, badge, title, category, id, price, point }) => {
                             </div>
                         }
                     </div>
-                    <Image onClick={openModal} className="img-fluid rounded" src={`https://picsum.photos/id/${id}/200/200`} alt="" width={200} height={200} />
-
-                    <SlickModal show={show} handleClose={closeModal} title={title}>
-                        <Image className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${price}/800/800`} alt="" width={800} height={800} />
-                    </SlickModal>
-
                 </Card.Body>
                 <Card.Footer className="border-0">
                     <Row className="d-flex align-items-center justify-content-between">
