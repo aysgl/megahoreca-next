@@ -1,7 +1,7 @@
 
 export default function Stars({ stars }) {
     return (
-        <p className="text-secondary">
+        <div className="text-secondary">
             {stars === 1 &&
                 <small>
                     <i className="icon-surface1-51 text-warning" />
@@ -47,6 +47,6 @@ export default function Stars({ stars }) {
                     <i className="icon-surface1-51 text-warning pe-2" />{stars}
                 </small>
             }
-        </p>
+        </div>
     )
 }

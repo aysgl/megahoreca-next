@@ -1,7 +1,7 @@
 export const prodata = [
     {
         "catId": 1,
-        "discount": "25",
+        "discount": 0,
         "price": "52.25",
         "stock": 0,
         "stars": 4,
@@ -21,7 +21,7 @@ export const prodata = [
     },
     {
         "catId": 1,
-        "discount": "25",
+        "discount": 0,
         "price": "12.45",
         "stock": 2,
         "stars": 2,
@@ -31,7 +31,7 @@ export const prodata = [
     },
     {
         "catId": 1,
-        "discount": "25",
+        "discount": "10",
         "price": "25.00",
         "stock": 0,
         "stars": 0,
@@ -41,7 +41,7 @@ export const prodata = [
     },
     {
         "catId": 1,
-        "discount": "25",
+        "discount": 0,
         "price": "159.99",
         "stock": 0,
         "stars": 4,
@@ -51,7 +51,7 @@ export const prodata = [
     },
     {
         "catId": 1,
-        "discount": "25",
+        "discount": 0,
         "price": "52.25",
         "stock": 0,
         "stars": 4,
@@ -61,7 +61,7 @@ export const prodata = [
     },
     {
         "catId": 1,
-        "discount": "25",
+        "discount": "12",
         "price": "52.25",
         "stock": 0,
         "stars": 4,
@@ -71,7 +71,7 @@ export const prodata = [
     },
     {
         "catId": 1,
-        "discount": "25",
+        "discount": 0,
         "price": "52.25",
         "stock": 2,
         "stars": 4,
@@ -81,7 +81,7 @@ export const prodata = [
     },
     {
         "catId": 1,
-        "discount": "25",
+        "discount": 0,
         "price": "52.25",
         "stock": 4,
         "stars": 4,
@@ -101,7 +101,7 @@ export const prodata = [
     },
     {
         "catId": 2,
-        "discount": "30",
+        "discount": 0,
         "price": "42.99",
         "stock": 0,
         "stars": 3,
@@ -111,7 +111,7 @@ export const prodata = [
     },
     {
         "catId": 2,
-        "discount": "30",
+        "discount": 0,
         "price": "42.99",
         "stock": 0,
         "stars": 3,
@@ -121,7 +121,7 @@ export const prodata = [
     },
     {
         "catId": 2,
-        "discount": "30",
+        "discount": "20",
         "price": "42.99",
         "stock": 8,
         "stars": 3,
@@ -131,7 +131,7 @@ export const prodata = [
     },
     {
         "catId": 2,
-        "discount": "30",
+        "discount": "12",
         "price": "42.99",
         "stock": 9,
         "stars": 3,
@@ -141,7 +141,7 @@ export const prodata = [
     },
     {
         "catId": 2,
-        "discount": "30",
+        "discount": 0,
         "price": "42.99",
         "stock": 0,
         "stars": 3,
@@ -151,7 +151,7 @@ export const prodata = [
     },
     {
         "catId": 2,
-        "discount": "30",
+        "discount": 0,
         "price": "42.99",
         "stock": 4,
         "stars": 3,
@@ -161,7 +161,7 @@ export const prodata = [
     },
     {
         "catId": 2,
-        "discount": "30",
+        "discount": 0,
         "price": "42.99",
         "stock": 4,
         "stars": 3,
@@ -171,7 +171,7 @@ export const prodata = [
     },
     {
         "catId": 2,
-        "discount": "30",
+        "discount": "10",
         "price": "42.99",
         "stock": 0,
         "stars": 3,
@@ -181,7 +181,7 @@ export const prodata = [
     },
     {
         "catId": 2,
-        "discount": "30",
+        "discount": "20",
         "price": "42.99",
         "stock": 0,
         "stars": 3,
@@ -191,7 +191,7 @@ export const prodata = [
     },
     {
         "catId": 3,
-        "discount": "50",
+        "discount": 0,
         "price": "19.99",
         "stock": 0,
         "stars": 5,
@@ -201,7 +201,7 @@ export const prodata = [
     },
     {
         "catId": 3,
-        "discount": "50",
+        "discount": 0,
         "price": "19.99",
         "stock": 5,
         "stars": 5,
@@ -211,7 +211,7 @@ export const prodata = [
     },
     {
         "catId": 3,
-        "discount": "50",
+        "discount": "25",
         "price": "19.99",
         "stock": 7,
         "stars": 5,
@@ -221,7 +221,7 @@ export const prodata = [
     },
     {
         "catId": 3,
-        "discount": "50",
+        "discount": 0,
         "price": "19.99",
         "stock": 8,
         "stars": 5,
@@ -231,7 +231,7 @@ export const prodata = [
     },
     {
         "catId": 3,
-        "discount": "50",
+        "discount": 0,
         "price": "19.99",
         "stock": 0,
         "stars": 5,
@@ -241,7 +241,7 @@ export const prodata = [
     },
     {
         "catId": 3,
-        "discount": "50",
+        "discount": 0,
         "price": "19.99",
         "stock": 0,
         "stars": 5,
@@ -251,7 +251,7 @@ export const prodata = [
     },
     {
         "catId": 3,
-        "discount": "50",
+        "discount": 0,
         "price": "19.99",
         "stock": 0,
         "stars": 5,
@@ -261,7 +261,7 @@ export const prodata = [
     },
     {
         "catId": 4,
-        "discount": "30",
+        "discount": "20",
         "stock": 5,
         "stars": 4,
         "id": 27,
@@ -270,7 +270,7 @@ export const prodata = [
     },
     {
         "catId": 4,
-        "discount": "30",
+        "discount": "10",
         "stock": 4,
         "stars": 4,
         "id": 28,
@@ -279,7 +279,7 @@ export const prodata = [
     },
     {
         "catId": 4,
-        "discount": "30",
+        "discount": 0,
         "stock": 3,
         "stars": 4,
         "id": 29,
@@ -288,7 +288,7 @@ export const prodata = [
     },
     {
         "catId": 4,
-        "discount": "30",
+        "discount": 0,
         "stock": 2,
         "stars": 4,
         "id": 30,
@@ -297,7 +297,7 @@ export const prodata = [
     },
     {
         "catId": 4,
-        "discount": "30",
+        "discount": "10",
         "stock": 1,
         "stars": 4,
         "id": 31,
@@ -306,7 +306,7 @@ export const prodata = [
     },
     {
         "catId": 4,
-        "discount": "30",
+        "discount": "12",
         "stock": 0,
         "stars": 4,
         "id": 32,
@@ -315,7 +315,7 @@ export const prodata = [
     },
     {
         "catId": 4,
-        "discount": "30",
+        "discount": "14",
         "stock": 0,
         "stars": 4,
         "id": 33,
@@ -324,7 +324,7 @@ export const prodata = [
     },
     {
         "catId": 4,
-        "discount": "30",
+        "discount": 0,
         "price": "129.99",
         "stock": 0,
         "stars": 4,
@@ -334,7 +334,7 @@ export const prodata = [
     },
     {
         "catId": 5,
-        "discount": "45",
+        "discount": 0,
         "price": "119.99",
         "stock": 0,
         "stars": 4,
@@ -344,7 +344,7 @@ export const prodata = [
     },
     {
         "catId": 5,
-        "discount": "45",
+        "discount": 0,
         "price": "119.99",
         "stock": 7,
         "stars": 4,
@@ -354,7 +354,7 @@ export const prodata = [
     },
     {
         "catId": 5,
-        "discount": "45",
+        "discount": 0,
         "price": "119.99",
         "stock": 6,
         "stars": 4,
@@ -364,7 +364,7 @@ export const prodata = [
     },
     {
         "catId": 5,
-        "discount": "45",
+        "discount": "25",
         "price": "119.99",
         "stock": 5,
         "stars": 4,
@@ -374,7 +374,7 @@ export const prodata = [
     },
     {
         "catId": 5,
-        "discount": "45",
+        "discount": 0,
         "price": "119.99",
         "stock": 4,
         "stars": 4,
@@ -384,7 +384,7 @@ export const prodata = [
     },
     {
         "catId": 5,
-        "discount": "45",
+        "discount": 0,
         "price": "119.99",
         "stock": 6,
         "stars": 4,
@@ -394,7 +394,7 @@ export const prodata = [
     },
     {
         "catId": 5,
-        "discount": "45",
+        "discount": 0,
         "price": "119.99",
         "stock": 9,
         "stars": 4,
@@ -404,7 +404,7 @@ export const prodata = [
     },
     {
         "catId": 5,
-        "discount": "45",
+        "discount": "15",
         "price": "119.99",
         "stock": 0,
         "stars": 4,
@@ -414,7 +414,7 @@ export const prodata = [
     },
     {
         "catId": 6,
-        "discount": "15",
+        "discount": 0,
         "price": "129.99",
         "stock": 0,
         "stars": 3,
@@ -424,7 +424,7 @@ export const prodata = [
     },
     {
         "catId": 6,
-        "discount": "15",
+        "discount": 0,
         "price": "129.99",
         "stock": 4,
         "stars": 3,
@@ -434,7 +434,7 @@ export const prodata = [
     },
     {
         "catId": 6,
-        "discount": "15",
+        "discount": 0,
         "price": "129.99",
         "stock": 1,
         "stars": 3,
@@ -444,7 +444,7 @@ export const prodata = [
     },
     {
         "catId": 6,
-        "discount": "15",
+        "discount": 0,
         "price": "129.99",
         "stock": 0,
         "stars": 3,
@@ -454,7 +454,7 @@ export const prodata = [
     },
     {
         "catId": 6,
-        "discount": "15",
+        "discount": "10",
         "price": "129.99",
         "stock": 0,
         "stars": 3,
@@ -464,7 +464,7 @@ export const prodata = [
     },
     {
         "catId": 6,
-        "discount": "15",
+        "discount": "25",
         "price": "129.99",
         "stock": 0,
         "stars": 3,
@@ -474,7 +474,7 @@ export const prodata = [
     },
     {
         "catId": 6,
-        "discount": "15",
+        "discount": 0,
         "price": "129.99",
         "stock": 9,
         "stars": 3,
@@ -484,7 +484,7 @@ export const prodata = [
     },
     {
         "catId": 6,
-        "discount": "15",
+        "discount": 0,
         "price": "129.99",
         "stock": 8,
         "stars": 3,
@@ -494,7 +494,7 @@ export const prodata = [
     },
     {
         "catId": 6,
-        "discount": "15",
+        "discount": "25",
         "price": "129.99",
         "stock": 8,
         "stars": 3,
@@ -504,7 +504,7 @@ export const prodata = [
     },
     {
         "catId": 7,
-        "discount": "20",
+        "discount": "10",
         "price": "46.99",
         "stock": 6,
         "stars": 5,
@@ -514,7 +514,7 @@ export const prodata = [
     },
     {
         "catId": 7,
-        "discount": "20",
+        "discount": "2",
         "price": "46.99",
         "stock": 0,
         "stars": 5,
@@ -524,7 +524,7 @@ export const prodata = [
     },
     {
         "catId": 7,
-        "discount": "20",
+        "discount": "2",
         "price": "46.99",
         "stock": 5,
         "stars": 5,
@@ -534,7 +534,7 @@ export const prodata = [
     },
     {
         "catId": 7,
-        "discount": "20",
+        "discount": 0,
         "price": "46.99",
         "stock": 4,
         "stars": 5,
@@ -544,7 +544,7 @@ export const prodata = [
     },
     {
         "catId": 7,
-        "discount": "20",
+        "discount": 0,
         "price": "46.99",
         "stock": 4,
         "stars": 5,
@@ -554,7 +554,7 @@ export const prodata = [
     },
     {
         "catId": 7,
-        "discount": "20",
+        "discount": 0,
         "price": "46.99",
         "stock": 3,
         "stars": 5,
@@ -564,7 +564,7 @@ export const prodata = [
     },
     {
         "catId": 7,
-        "discount": "20",
+        "discount": 0,
         "price": "46.99",
         "stock": 2,
         "stars": 5,
@@ -574,7 +574,7 @@ export const prodata = [
     },
     {
         "catId": 7,
-        "discount": "20",
+        "discount": 0,
         "price": "46.99",
         "stock": 1,
         "stars": 5,
@@ -584,7 +584,7 @@ export const prodata = [
     },
     {
         "catId": 8,
-        "discount": "24",
+        "discount": "20",
         "price": "66.99",
         "stock": 0,
         "stars": 5,
@@ -594,7 +594,7 @@ export const prodata = [
     },
     {
         "catId": 8,
-        "discount": "24",
+        "discount": "20",
         "price": "66.99",
         "stock": 0,
         "stars": 5,
@@ -604,7 +604,7 @@ export const prodata = [
     },
     {
         "catId": 8,
-        "discount": "24",
+        "discount": "12",
         "price": "66.99",
         "stock": 0,
         "stars": 5,
@@ -614,7 +614,7 @@ export const prodata = [
     },
     {
         "catId": 8,
-        "discount": "24",
+        "discount": 0,
         "price": "66.99",
         "stock": 1,
         "stars": 5,
@@ -624,7 +624,7 @@ export const prodata = [
     },
     {
         "catId": 8,
-        "discount": "24",
+        "discount": 0,
         "price": "66.99",
         "stock": 0,
         "stars": 5,
@@ -634,7 +634,7 @@ export const prodata = [
     },
     {
         "catId": 8,
-        "discount": "24",
+        "discount": 0,
         "price": "66.99",
         "stock": 0,
         "stars": 5,
@@ -644,7 +644,7 @@ export const prodata = [
     },
     {
         "catId": 8,
-        "discount": "24",
+        "discount": "14",
         "price": "66.99",
         "stock": 3,
         "stars": 5,
@@ -654,7 +654,7 @@ export const prodata = [
     },
     {
         "catId": 8,
-        "discount": "24",
+        "discount": 0,
         "price": "66.99",
         "stock": 4,
         "stars": 5,
@@ -664,7 +664,7 @@ export const prodata = [
     },
     {
         "catId": 9,
-        "discount": "36",
+        "discount": 0,
         "price": "48.00",
         "stock": 5,
         "stars": 4,
@@ -674,7 +674,7 @@ export const prodata = [
     },
     {
         "catId": 9,
-        "discount": "36",
+        "discount": "16",
         "price": "48.00",
         "stock": 0,
         "stars": 4,
@@ -684,7 +684,7 @@ export const prodata = [
     },
     {
         "catId": 9,
-        "discount": "36",
+        "discount": "6",
         "price": "48.00",
         "stock": 7,
         "stars": 4,
@@ -694,7 +694,7 @@ export const prodata = [
     },
     {
         "catId": 9,
-        "discount": "36",
+        "discount": 0,
         "price": "48.00",
         "stock": 0,
         "stars": 4,
@@ -704,7 +704,7 @@ export const prodata = [
     },
     {
         "catId": 9,
-        "discount": "36",
+        "discount": 0,
         "price": "48.00",
         "stock": 6,
         "stars": 4,
@@ -714,7 +714,7 @@ export const prodata = [
     },
     {
         "catId": 9,
-        "discount": "36",
+        "discount": 0,
         "price": "48.00",
         "stock": 5,
         "stars": 4,
@@ -724,7 +724,7 @@ export const prodata = [
     },
     {
         "catId": 9,
-        "discount": "36",
+        "discount": 0,
         "price": "48.00",
         "stock": 4,
         "stars": 4,
@@ -734,7 +734,7 @@ export const prodata = [
     },
     {
         "catId": 9,
-        "discount": "36",
+        "discount": 0,
         "price": "48.00",
         "stock": 3,
         "stars": 4,
@@ -744,7 +744,7 @@ export const prodata = [
     },
     {
         "catId": 9,
-        "discount": "36",
+        "discount": 0,
         "price": "48.00",
         "stock": 2,
         "stars": 4,
@@ -754,7 +754,7 @@ export const prodata = [
     },
     {
         "catId": 10,
-        "discount": "10",
+        "discount": "2",
         "price": "29.00",
         "stock": 2,
         "stars": 5,
@@ -784,7 +784,7 @@ export const prodata = [
     },
     {
         "catId": 10,
-        "discount": "10",
+        "discount": 0,
         "price": "29.00",
         "stock": 1,
         "stars": 5,
@@ -794,7 +794,7 @@ export const prodata = [
     },
     {
         "catId": 10,
-        "discount": "10",
+        "discount": 0,
         "price": "29.00",
         "stock": 2,
         "stars": 5,
@@ -804,7 +804,7 @@ export const prodata = [
     },
     {
         "catId": 10,
-        "discount": "10",
+        "discount": 0,
         "price": "29.00",
         "stock": 3,
         "stars": 5,
@@ -814,7 +814,7 @@ export const prodata = [
     },
     {
         "catId": 10,
-        "discount": "10",
+        "discount": 0,
         "price": "29.00",
         "stock": 4,
         "stars": 5,
@@ -834,7 +834,7 @@ export const prodata = [
     },
     {
         "catId": 10,
-        "discount": "10",
+        "discount": 0,
         "price": "29.00",
         "stock": 0,
         "stars": 5,
@@ -844,7 +844,7 @@ export const prodata = [
     },
     {
         "catId": 10,
-        "discount": "10",
+        "discount": 0,
         "price": "29.00",
         "stock": 0,
         "stars": 5,
@@ -864,7 +864,7 @@ export const prodata = [
     },
     {
         "catId": 11,
-        "discount": "5",
+        "discount": "15",
         "price": "25.00",
         "stock": 6,
         "stars": 4,
@@ -874,7 +874,7 @@ export const prodata = [
     },
     {
         "catId": 11,
-        "discount": "5",
+        "discount": "15",
         "price": "25.00",
         "stock": 7,
         "stars": 4,
@@ -884,7 +884,7 @@ export const prodata = [
     },
     {
         "catId": 11,
-        "discount": "5",
+        "discount": "2",
         "price": "25.00",
         "stock": 8,
         "stars": 4,
@@ -894,7 +894,7 @@ export const prodata = [
     },
     {
         "catId": 11,
-        "discount": "5",
+        "discount": 0,
         "price": "25.00",
         "stock": 9,
         "stars": 4,
@@ -904,7 +904,7 @@ export const prodata = [
     },
     {
         "catId": 11,
-        "discount": "5",
+        "discount": 0,
         "price": "25.00",
         "stock": 10,
         "stars": 4,
@@ -914,7 +914,7 @@ export const prodata = [
     },
     {
         "catId": 11,
-        "discount": "5",
+        "discount": 0,
         "price": "25.00",
         "stock": 0,
         "stars": 4,
@@ -924,7 +924,7 @@ export const prodata = [
     },
     {
         "catId": 11,
-        "discount": "5",
+        "discount": "15",
         "price": "25.00",
         "stock": 0,
         "stars": 4,
@@ -934,7 +934,7 @@ export const prodata = [
     },
     {
         "catId": 11,
-        "discount": "5",
+        "discount": "25",
         "price": "25.00",
         "stock": 8,
         "stars": 4,
@@ -944,7 +944,7 @@ export const prodata = [
     },
     {
         "catId": 11,
-        "discount": "5",
+        "discount": 0,
         "price": "25.00",
         "stock": 9,
         "stars": 4,
@@ -954,7 +954,7 @@ export const prodata = [
     },
     {
         "catId": 11,
-        "discount": "5",
+        "discount": 0,
         "price": "25.00",
         "stock": 10,
         "stars": 4,
@@ -964,7 +964,7 @@ export const prodata = [
     },
     {
         "catId": 11,
-        "discount": "5",
+        "discount": 0,
         "price": "25.00",
         "stock": 12,
         "stars": 4,
@@ -974,7 +974,7 @@ export const prodata = [
     },
     {
         "catId": 11,
-        "discount": "5",
+        "discount": "25",
         "price": "25.00",
         "stock": 11,
         "stars": 4,

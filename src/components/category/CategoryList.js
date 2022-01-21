@@ -29,7 +29,7 @@ export default function CategoryList({ cat }) {
                                 <Link href="/category/[id]" as={`/category/${cat.id}`}>
                                     <a className='link-dark'>
                                         <Card.ImgOverlay className='d-flex align-items-center justify-content-center'>
-                                            <Card.Title as="p" className='text-center text-white fw-bold small'>{sub.title}</Card.Title>
+                                            <Card.Title as="p" className='text-center text-white fw-bold small mb-0'>{sub.title}</Card.Title>
                                         </Card.ImgOverlay>
                                     </a>
                                 </Link>

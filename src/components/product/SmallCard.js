@@ -9,7 +9,7 @@ import Image from "next/image"
 import CategoryBreadcrumb from "../slick/CategoryBreadcrumb"
 import Price from "./Price"
 
-export default function SmallCard({ title, category, prodata, stars, price, stock, badge, discount, id, catId, catTitle, catSubcat }) {
+export default function SmallCard({ title, stars, price, stock, badge, discount, id }) {
     const [show, setShow] = useState(false);
 
     const closeModal = () => {
@@ -20,7 +20,7 @@ export default function SmallCard({ title, category, prodata, stars, price, stoc
     };
     return (
         <Card className="w-100 h-100">
-            {badge === 0 ? null :
+            {discount === 0 ? null :
                 <div className="position-relative" style={{ zIndex: "1" }}>
                     <div className="position-absolute end-0">
                         <BigBadge badge={badge} discount={discount} />
@@ -52,7 +52,7 @@ export default function SmallCard({ title, category, prodata, stars, price, stoc
             <Card.Footer className="border-0">
                 <Row className="d-flex align-items-center justify-content-between">
                     <Col>
-                        <Price price={price} />
+                        <Price style="h5" price={price} />
                     </Col>
                     <Col className="text-end">
                         <ActionButton />

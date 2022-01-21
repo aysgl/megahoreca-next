@@ -3,16 +3,17 @@ import Slider from "react-slick";
 import SlickCard from "./SlickCard";
 import axios from "axios";
 
-export default function SlickCarousel() {
-    const [products, setProducts] = useState(null);
+export default function SlickCarousel({ prodata, catdata }) {
+    // const [products, setProducts] = useState(null);
 
-    useEffect(() => {
-        axios.get("https://jsonplaceholder.typicode.com/posts").then((response) => {
-            setProducts(response.data);
-        });
-    }, []);
+    // useEffect(() => {
+    //     axios.get("https://jsonplaceholder.typicode.com/posts").then((response) => {
+    //         setProducts(response.data);
+    //     });
+    // }, []);
 
-    if (!products) return null;
+    // if (!products) return null;
+
     const settings = {
         infinite: true,
         speed: 2000,
@@ -21,7 +22,7 @@ export default function SlickCarousel() {
         centerPadding: 10,
         slidesToShow: 5,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -52,17 +53,20 @@ export default function SlickCarousel() {
 
     return (
         <Slider {...settings}>
-            {products.map((pro, i) =>
+            {prodata.map((pro, i) =>
                 <SlickCard
-                    key={i}
-                    id={pro.id}
-                    photo={pro.id}
-                    price={pro.id}
-                    category={pro.title}
+                    key={pro.id}
                     title={pro.title.substring(0, 40)}
-                    stock={pro.id}
-                    point={pro.id == 3 || pro.id == 8 || pro.id == 9}
-                    badge={pro.id == 4 || pro.id == 7 || pro.id == 1} />
+                    price={pro.price}
+                    // catId={catdata.id}
+                    // catTitle={catdata.title}
+                    // catSubcat={catdata.subcategory}
+                    stars={pro.stars}
+                    stock={pro.stock}
+                    discount={pro.discount}
+                    badge={pro.price}
+                    id={pro.catId}
+                />
             )}
         </Slider>
     );

@@ -10,7 +10,7 @@ import CategoryBreadcrumb from "../slick/CategoryBreadcrumb"
 import Price from "./Price"
 
 
-export default function BigCard({ title, catdata, prodata, stars, price, stock, badge, discount, id, catId, catTitle, catSubcat }) {
+export default function BigCard({ title, stars, price, stock, badge, discount, id }) {
     const [show, setShow] = useState(false);
 
     const closeModal = () => {
@@ -19,17 +19,17 @@ export default function BigCard({ title, catdata, prodata, stars, price, stock, 
     const openModal = () => {
         setShow(true);
     };
-    console.log("title " + catTitle);
+
     return (
         <Card className="w-100 h-100">
-            {badge === 0 ? null :
+            {discount === 0 ? null :
                 <div className="position-relative" style={{ zIndex: "1" }}>
                     <div className="position-absolute end-0">
                         <BigBadge badge={badge} discount={discount} />
                     </div>
                 </div>
             }
-            <Image onClick={openModal} className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${id}/600/400`} width={600} height={400} layout="responsive" alt="" />
+            <Image onClick={openModal} className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${id}/600/450`} width={600} height={450} layout="responsive" alt="" />
 
             <SlickModal show={show} handleClose={closeModal} title={title}>
                 <Image className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${id}/800/800`} alt="" width={800} height={800} />
@@ -50,17 +50,13 @@ export default function BigCard({ title, catdata, prodata, stars, price, stock, 
                     {stars === 0 ? null :
                         <Stars stars={stars} />
                     }
-
-
                 </div>
-
-
             </Card.Body>
 
             <Card.Footer className="border-0">
                 <Row className="d-flex align-items-center justify-content-between">
                     <Col>
-                        <Price price={price} />
+                        <Price style="h3" price={price} />
                     </Col>
                     <Col className="text-end">
                         <ActionButton />

@@ -9,6 +9,7 @@ import CategoryListSmall from '../components/category/CategoryListSmall'
 import useSWR from 'swr'
 import { Container, Row } from 'react-bootstrap'
 import Seperate from '../components/stuff/Seperate'
+import Meta from '../components/seo/Meta'
 
 const catfetcher = (url) => fetch(url).then((res) => res.json())
 const profetcher = (url) => fetch(url).then((res) => res.json())
@@ -26,33 +27,18 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-
-        <meta
-          name="description"
-          content="Use Sass to start your Next.js app with CSS superpowers!"
-        ></meta>
-      </Head>
+      <Meta title="home title" desc="desc" />
       <CarouselSection />
-      <SlickCarouselSection title="PROMOTIES VAN DE WEEK" />
-      <Advertisement />
       {prodata && catdata &&
-        <MasonrySection title="Ontdek onze products" prodata={prodata} catdata={catdata} />
+        <>
+          <SlickCarouselSection title="PROMOTIES VAN DE WEEK" prodata={prodata} catdata={catdata} />
+          <Advertisement />
+          <MasonrySection title="Ontdek onze products" prodata={prodata} catdata={catdata} />
+          <CategoryListSmall prodata={prodata} catdata={catdata} />
+          <SlickCarouselSection title="PROMOTIES VAN DE WEEK" prodata={prodata} catdata={catdata} />
+          <ReviewCarouselSection title="EERDER BEKEKEN DOOR JOU" prodata={prodata} catdata={catdata} />
+        </>
       }
-
-      <Container>
-        <p className="text-uppercase text-center title">Ontdek onze categorien</p>
-        <Row xs={3} md={6} lg={8} className='g-3'>
-          {catdata.map((c, i) => (
-            <CategoryListSmall key={i} cat={c} subcat={c} />
-          ))}
-        </Row>
-      </Container>
-      <Seperate />
-      <SlickCarouselSection title="PROMOTIES VAN DE WEEK" />
-      <ReviewCarouselSection title="EERDER BEKEKEN DOOR JOU" />
       <PerksBanner />
     </>
   )
