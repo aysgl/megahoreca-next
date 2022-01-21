@@ -1,6 +1,6 @@
 import { Card, Row, Col } from "react-bootstrap"
 import Stars from "./Stars"
-import Badge from "./Badge"
+import BigBadge from "./Badge"
 import Stock from "./Stock"
 import ActionButton from "./ActionButton"
 import Image from "next/image"
@@ -28,7 +28,7 @@ export default function StandartCard({ title, category, point, price, stock, bad
                     {badge &&
                         <div className="position-relative" style={{ zIndex: "1" }}>
                             <div className="position-absolute">
-                                <Badge badge={badge} />
+                                <BigBadge badge={badge} />
                             </div>
                         </div>
                     }

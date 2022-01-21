@@ -1,6 +1,6 @@
 import { Col, Row } from "react-bootstrap";
 import React from "react";
-import Badge from "../product/Badge";
+import BigBadge from "../product/BigBadge";
 import SmallBadge from "../product/SmallBadge";
 import Image from "next/image";
 
@@ -16,7 +16,7 @@ export default function BannerLeft() {
                 </Col>
                 <Col xs={12} className="position-relative" style={{ zIndex: "1" }}>
                     <div className="position-absolute">
-                        <Badge />
+                        <BigBadge />
                     </div>
                 </Col>
             </Row>

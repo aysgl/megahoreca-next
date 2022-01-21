@@ -1,9 +1,8 @@
-import { megamenu } from '../../../data/megamenu'
+import { catdata } from '../../../data/catdata'
 
 export default function categoryHandler({ query: { id } }, res) {
-  const filtered = megamenu.filter((p) => p.id === id)
+  const filtered = catdata.filter((p) => p.id === id)
 
-  // User with id exists
   if (filtered.length > 0) {
     res.status(200).json(filtered[0])
   } else {

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Row, Col, Card, Modal, Button } from "react-bootstrap";
 import ActionButton from "../product/ActionButton";
-import Badge from "../product/Badge";
+import BigBadge from "../product/BigBadge";
 import Stars from "../product/Stars";
 import Stock from "../product/Stock";
 import CategoryBreadcrumb from "./CategoryBreadcrumb";
@@ -23,7 +23,8 @@ const SlickCard = ({ stock, badge, title, category, id, price, point }) => {
             <Card className="mb-4" style={{ cursor: "pointer" }}>
                 <Card.Body>
                     <div style={{ minHeight: "110px" }}>
-                        <CategoryBreadcrumb category={category} />
+                        <CategoryBreadcrumb />
+
                         <Card.Title className="mb-1 fw-bold h6">{title}</Card.Title>
 
                         {stock &&
@@ -36,8 +37,8 @@ const SlickCard = ({ stock, badge, title, category, id, price, point }) => {
 
                         {badge &&
                             <div className="position-relative" style={{ zIndex: "1" }}>
-                                <div className="position-absolute">
-                                    <Badge badge={badge} />
+                                <div className="position-absolute end-0">
+                                    <BigBadge badge={badge} />
                                 </div>
                             </div>
                         }

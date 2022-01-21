@@ -5,63 +5,123 @@ import axios from "axios";
 import BigCard from "./product/BigCard";
 import SmallCard from "./product/SmallCard";
 
-export default function MasonrySection({ stock, stars, badge, id }) {
-    const [products, setProducts] = useState(null);
+export default function MasonrySection({ prodata, catdata }) {
+    // const [products, setProducts] = useState(null);
 
-    useEffect(() => {
-        axios.get("https://jsonplaceholder.typicode.com/users").then((response) => {
-            setProducts(response.data);
-        });
-    }, []);
+    // useEffect(() => {
+    //     axios.get("https://jsonplaceholder.typicode.com/users").then((response) => {
+    //         setProducts(response.data);
+    //     });
+    // }, []);
 
-    if (!products) return null;
+    // if (!products) return null;
 
     return (
         <>
             <Container>
-                <Row className="g-3">
-                    <Col lg={6} md={6} className="">
-                        {products.slice(0, 1).map(pro =>
-                            <BigCard key={pro.id} title={pro.name} price={pro.id} category={pro.username} point={pro.id} stock={pro.id} />
+                {catdata &&
+                    <Row className="g-3">
+                        {prodata.filter(x => x.id == 1).map((pro, i) =>
+                            <Col lg={6} md={6} className="">
+                                {/* {catdata.map((cat, i) => */}
+                                <BigCard
+                                    key={pro.id}
+                                    title={pro.title}
+                                    price={pro.price}
+                                    // catId={catdata.id}
+                                    // catTitle={catdata.title}
+                                    // catSubcat={catdata.subcategory}
+                                    stars={pro.stars}
+                                    stock={pro.stock}
+                                    discount={pro.discount}
+                                    badge={pro.price}
+                                    id={pro.catId}
+                                />
+                                {/* )} */}
+                            </Col>
                         )}
-                    </Col>
-                    <Col lg={3} md={3}>
-                        <div className="row g-3">
-                            <div className="h-50 col">
-                                <div className="h-100 d-flex align-content-between flex-wrap text-left">
-                                    {products.slice(1, 2).map(pro =>
-                                        <SmallCard key={pro.id} title={pro.name} price={pro.id} category={pro.username} badge={pro.id} stock={pro.id} />
-                                    )}
+                        <Col lg={3} md={3}>
+                            <div className="row g-3">
+                                <div className="h-50 col-12">
+                                    <div className="h-100 d-flex align-content-between flex-wrap text-left">
+                                        {prodata.filter(x => x.id == 2).map((pro, i) =>
+                                            <SmallCard
+                                                key={pro.id}
+                                                title={pro.title}
+                                                price={pro.price}
+                                                // catId={cat.id}
+                                                // catTitle={cat.title}
+                                                // catSubcat={cat.subcategory}
+                                                stars={pro.stars}
+                                                stock={pro.stock}
+                                                discount={pro.discount}
+                                                badge={pro.price}
+                                                id={pro.catId} />
+                                        )}
+                                    </div>
+                                </div>
+                                <div className="h-50 col-12">
+                                    <div className="h-100 d-flex align-content-between flex-wrap text-left">
+                                        {prodata.filter(x => x.id == 3).map((pro, i) =>
+                                            <SmallCard
+                                                key={pro.id}
+                                                title={pro.title}
+                                                price={pro.price}
+                                                // catId={cat.id}
+                                                // catTitle={cat.title}
+                                                // catSubcat={cat.subcategory}
+                                                stars={pro.stars}
+                                                stock={pro.stock}
+                                                discount={pro.discount}
+                                                badge={pro.price}
+                                                id={pro.catId} />
+                                        )}
+                                    </div>
                                 </div>
                             </div>
-                            <div className="h-50 col">
-                                <div className="h-100 d-flex align-content-between flex-wrap text-left">
-                                    {products.slice(2, 3).map(pro =>
-                                        <SmallCard key={pro.id} title={pro.name} price={pro.id} category={pro.username} point={pro.id} />
-                                    )}
+                        </Col>
+                        <Col lg={3} md={3}>
+                            <div className="list-unstyled row g-3">
+                                <div className="h-50 col-12">
+                                    <div className="h-100 d-flex align-content-between flex-wrap text-left">
+                                        {prodata.filter(x => x.id == 4).map((pro, i) =>
+                                            <SmallCard
+                                                key={pro.id}
+                                                title={pro.title}
+                                                price={pro.price}
+                                                // catId={cat.id}
+                                                // catTitle={cat.title}
+                                                // catSubcat={cat.subcategory}
+                                                stars={pro.stars}
+                                                stock={pro.stock}
+                                                discount={pro.discount}
+                                                badge={pro.price}
+                                                id={pro.catId} />
+                                        )}
+                                    </div>
+                                </div>
+                                <div className="h-50 col-12">
+                                    <div className="h-100 d-flex align-content-between flex-wrap text-left">
+                                        {prodata.filter(x => x.id == 5).map((pro, i) =>
+                                            <SmallCard
+                                                key={pro.id}
+                                                title={pro.title}
+                                                price={pro.price}
+                                                // catId={cat.id}
+                                                // catTitle={cat.title}
+                                                // catSubcat={cat.subcategory}
+                                                stars={pro.stars}
+                                                stock={pro.stock}
+                                                discount={pro.discount}
+                                                badge={pro.price}
+                                                id={pro.catId} />
+                                        )}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </Col>
-                    <Col lg={3} md={3}>
-                        <div className="list-unstyled row g-3">
-                            <div className="h-50 col">
-                                <div className="h-100 d-flex align-content-between flex-wrap text-left">
-                                    {products.slice(3, 4).map(pro =>
-                                        <SmallCard key={pro.id} title={pro.name} price={pro.id} category={pro.username} point={pro.id} />
-                                    )}
-                                </div>
-                            </div>
-                            <div className="h-50 col">
-                                <div className="h-100 d-flex align-content-between flex-wrap text-left">
-                                    {products.slice(4, 5).map(pro =>
-                                        <SmallCard key={pro.id} title={pro.name} price={pro.id} category={pro.username} stock={pro.id} />
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
+                        </Col>
+                    </Row>
+                }
             </Container>
 
             <Seperate />

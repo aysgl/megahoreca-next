@@ -4,7 +4,7 @@ import DropdownCart from "./DropdownCart";
 import Search from "./Search";
 import logo from "../../images/logo.svg"
 import Megamenu from './Megamenu';
-import { megamenu } from "../../data/megamenu"
+import { catdata } from "../../data/catdata"
 import Image from "next/image";
 
 export default function Header() {
@@ -22,7 +22,7 @@ export default function Header() {
                     </Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className='h-100'>
-                        <Megamenu category={megamenu} />
+                        <Megamenu category={catdata} />
                         <div className='w-75 d-flex'>
                             <Search />
                             <DropdownProfile />

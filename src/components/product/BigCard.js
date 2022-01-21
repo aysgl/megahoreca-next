@@ -1,14 +1,16 @@
 import { useState } from "react"
 import { Card, Row, Col } from "react-bootstrap"
 import Stars from "./Stars"
-import Badge from "./Badge"
+import BigBadge from "./BigBadge"
 import Stock from "./Stock"
 import ActionButton from "./ActionButton"
 import SlickModal from "../slick/SlickModal"
 import Image from "next/image"
 import CategoryBreadcrumb from "../slick/CategoryBreadcrumb"
+import Price from "./Price"
 
-export default function BigCard({ title, category, point, price, stock, badge, id }) {
+
+export default function BigCard({ title, catdata, prodata, stars, price, stock, badge, discount, id, catId, catTitle, catSubcat }) {
     const [show, setShow] = useState(false);
 
     const closeModal = () => {
@@ -17,44 +19,45 @@ export default function BigCard({ title, category, point, price, stock, badge, i
     const openModal = () => {
         setShow(true);
     };
+    console.log("title " + catTitle);
     return (
         <Card className="w-100 h-100">
             <Card.Body>
                 <div>
-                    <CategoryBreadcrumb category={category} />
-                    <Card.Title as="h3" className="mb-1 fw-bold">{title + " lorem ispum sit amet dolor for big card"}</Card.Title>
+                    {/* <CategoryBreadcrumb catdata={catdata} /> */}
+                    {/* <CategoryBreadcrumb catdata={catdata == id ? "eşit değil" : catTitle} /> */}
+                    <CategoryBreadcrumb id={id} catId={catId} catTitle={catTitle} catSubcat={catSubcat} />
 
-                    {stock &&
+                    <Card.Title as="h3" className="mb-1 fw-bold">{title}</Card.Title>
+
+                    {stock === 0 ? null :
                         <Stock stock={stock} />
                     }
 
-                    {point &&
-                        <Stars point={point} />
+                    {stars === 0 ? null :
+                        <Stars stars={stars} />
                     }
 
-                    {badge &&
+                    {badge === 0 ? null :
                         <div className="position-relative" style={{ zIndex: "1" }}>
-                            <div className="position-absolute">
-                                <Badge badge={badge} />
+                            <div className="position-absolute end-0">
+                                <BigBadge badge={badge} discount={discount} />
                             </div>
                         </div>
                     }
                 </div>
 
-                <Image onClick={openModal} className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${price}/600/400`} width={600} height={400} layout="responsive" alt="" />
+                <Image onClick={openModal} className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${id}/600/400`} width={600} height={400} layout="responsive" alt="" />
 
                 <SlickModal show={show} handleClose={closeModal} title={title}>
-                    <Image className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${price}/800/800`} alt="" width={800} height={800} />
+                    <Image className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${id}/800/800`} alt="" width={800} height={800} />
                 </SlickModal>
             </Card.Body>
 
             <Card.Footer className="border-0">
                 <Row className="d-flex align-items-center justify-content-between">
                     <Col>
-                        <p className="fw-bold lh-1 h5">
-                            <span>€{price},</span>
-                            <span className="small">{price + 1}</span>
-                        </p>
+                        <Price price={price} />
                     </Col>
                     <Col className="text-end">
                         <ActionButton />

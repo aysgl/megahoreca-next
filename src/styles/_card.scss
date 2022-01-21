@@ -5,3 +5,10 @@
     border-color: $white;
   }
 }
+.category-card {
+  background-color: $primary !important;
+  border-color: $white !important;
+  img {
+    opacity: 0.5;
+  }
+}

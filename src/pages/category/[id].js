@@ -6,35 +6,37 @@ import ActionButton from '../../components/product/ActionButton';
 import SlickCard from '../../components/slick/SlickCard';
 import Seperate from '../../components/stuff/Seperate';
 import Link from "next/link"
+import CategoryBreadcrumb from '../../components/slick/CategoryBreadcrumb';
+import Counter from '../../components/stuff/Counter';
 
 const fetcher = async (url) => {
     const res = await fetch(url)
-    const data = await res.json()
+    const catdata = await res.json()
 
     if (res.status !== 200) {
-        throw new Error(data.message)
+        throw new Error(catdata.message)
     }
-    return data
+    return catdata
 }
 
 export default function CategoryDetails() {
     const [toggleViewMode, setToggleViewMode] = useState(false);
 
     const { query } = useRouter()
-    const { data, error } = useSWR(
+    const { catdata, error } = useSWR(
         () => query.id && `/api/category/${query.id}`,
         fetcher
     )
 
     if (error) return <div>{error.message}</div>
-    if (!data) return <div>Loading...</div>
+    if (!catdata) return <div>Loading data...</div>
 
     return (
         <Container>
             <div className='mb-3'>
                 <Row className='d-flex align-items-center'>
                     <Col md={4}>
-                        <p className='mb-0 fw-bold'>#{data.id} | {data.title}</p>
+                        <p className='mb-0 fw-bold'>#{catdata.id} | {catdata.title}</p>
                     </Col>
                     <Col md={4} className='text-center'><span className='fw-bold'>0</span> search result</Col>
                     <Col className='text-end' md={4}>
@@ -149,10 +151,11 @@ export default function CategoryDetails() {
                                 </Col>
                                 <Col md={8}>
                                     <Card.Body>
-                                        <Card.Text className='text-secondary mb-0'>
-                                            Category breadcrumbs component ekelenecek
-                                        </Card.Text>
-                                        <Card.Title as="h3">Product name - Lorem ipsum sit amet</Card.Title>
+                                        <CategoryBreadcrumb
+                                            category={catdata.title}
+                                            subcat={catdata}
+                                        />
+                                        <Card.Title as="h3">Product name 1 - Lorem ipsum sit amet</Card.Title>
                                         <Card.Text>
                                             <Row>
                                                 <Col md={8} className='border-end'>
@@ -173,11 +176,7 @@ export default function CategoryDetails() {
                                                 </Col>
                                                 <Col md={4}>
                                                     <p className='h2 d-flex'>€000,00</p>
-                                                    <ButtonGroup className='mb-4 d-flex' size="sm" aria-label="Basic example">
-                                                        <Button variant="outline-primary">-</Button>
-                                                        <Button as="div" variant="outline-primary">0</Button>
-                                                        <Button variant="outline-primary">+</Button>
-                                                    </ButtonGroup>
+                                                    <Counter />
                                                     <ActionButton />
                                                 </Col>
                                             </Row>
@@ -194,10 +193,8 @@ export default function CategoryDetails() {
                                 </Col>
                                 <Col md={8}>
                                     <Card.Body>
-                                        <Card.Text className='text-secondary mb-0'>
-                                            Category breadcrumbs component ekelenecek
-                                        </Card.Text>
-                                        <Card.Title as="h3">Product name - Lorem ipsum sit amet</Card.Title>
+                                        {/* <CategoryBreadcrumb category /> */}
+                                        <Card.Title as="h3">Product name 2 - Lorem ipsum sit amet</Card.Title>
                                         <Card.Text>
                                             <Row>
                                                 <Col md={8} className='border-end'>

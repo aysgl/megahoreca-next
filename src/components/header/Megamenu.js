@@ -52,14 +52,14 @@ export default function Megamenu({ category }) {
                                     <Col sm={9}>
                                         <Tab.Content>
                                             {category.map(cat =>
-                                                <Tab.Pane key={cat.id} eventKey={cat.id} className='bg-light rounded p-3'>
+                                                <Tab.Pane key={cat.id} eventKey={cat.id} className='border rounded rounded p-3'>
                                                     <Row style={{ zIndex: "1", position: "relative" }}>
                                                         <Col md={5}>
-                                                            {cat.subCategories.map(sub =>
-                                                                <ul key={sub} className="list-unstyled lh-1">
+                                                            {cat.subcategory.map(sub =>
+                                                                <ul key={sub.id} className="list-unstyled lh-1">
                                                                     <li className='small my-1'>
                                                                         <Link href="/category/[id]" as={`/category/${cat.id}`}>
-                                                                            <a className='link-dark'>{sub}</a>
+                                                                            <a className='link-dark'>{sub.title}</a>
                                                                         </Link>
                                                                     </li>
                                                                 </ul>
