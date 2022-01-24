@@ -38,7 +38,7 @@ export default function BigCard({ title, stars, price, stock, badge, discount, i
             </SlickModal>
 
             <Link href="/product/[slug]" as={`/product/${slug}`}>
-                <a className="link-dark mb-0">
+                <a className="link-dark mb-0 d-block">
                     <Card.Body>
                         <div>
                             <CategoryBreadcrumb catname={catname} subcatname={subcatname} />
@@ -54,7 +54,7 @@ export default function BigCard({ title, stars, price, stock, badge, discount, i
                         </div>
                     </Card.Body>
 
-                    <Card.Footer className="border-0">
+                    <Card.Footer className="border-0 align-bottom">
                         <Row className="d-flex align-items-center justify-content-between">
                             <Col>
                                 <Price style="h3" price={price} />

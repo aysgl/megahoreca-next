@@ -1,19 +1,18 @@
 import { useRouter } from "next/router";
 import { post } from "../../../data/post";
 import Link from "next/link";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
 import Seperate from "../../../components/stuff/Seperate";
 import SocialShare from "../../../components/stuff/SocialShare"
 
-export default function BlogsPage(props) {
+export default function Blog(props) {
     const router = useRouter();
     const { blog, testid } = router.query;
 
     return (
         <>
-            {post.filter(x => x.slug == "blog/" + blog).map((po, i) =>
+            {post.filter(x => x.id == testid).map((po, i) =>
                 <Container>
-
                     <Card className="h-100" key={po.id} style={{ marginTop: "3rem", marginRight: "2rem" }}>
                         <Row md={4} style={{ marginTop: "-2rem", marginRight: "-2rem" }} className="g-0">
                             <Col md={11} className="ms-auto">
@@ -28,7 +27,6 @@ export default function BlogsPage(props) {
                             </Col>
                         </Row>
                     </Card>
-
                     <Seperate />
                     <Row>
                         <Col>
