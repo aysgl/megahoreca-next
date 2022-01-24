@@ -4,6 +4,9 @@
     box-shadow: $box-shadow;
     border-color: $white;
   }
+  a {
+    text-decoration: none !important;
+  }
 }
 .category-card {
   background-color: $primary !important;

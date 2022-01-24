@@ -26,7 +26,7 @@ export default function CategoryList({ catdata }) {
                                 <Col md={2} key={i}>
                                     <Card className="category-card text-white">
                                         <Card.Img src={cat.img} alt="Card image" />
-                                        <Link href="/category/subcategory/[id]" as={`/category/subcategory/${sub.id}`}>
+                                        <Link href={`${sub.slug}`} as={sub.slug}>
                                             <a className='link-dark'>
                                                 <Card.ImgOverlay className='d-flex align-items-center justify-content-center'>
                                                     <Card.Title as="p" className='text-center text-white fw-bold small mb-0'>{sub.title}</Card.Title>

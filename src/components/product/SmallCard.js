@@ -8,8 +8,9 @@ import SlickModal from "../slick/SlickModal"
 import Image from "next/image"
 import CategoryBreadcrumb from "../slick/CategoryBreadcrumb"
 import Price from "./Price"
+import Link from "next/link"
 
-export default function SmallCard({ title, stars, price, stock, badge, discount, id }) {
+export default function SmallCard({ title, stars, price, stock, badge, discount, id, catname, subcatname, slug }) {
     const [show, setShow] = useState(false);
 
     const closeModal = () => {
@@ -32,33 +33,36 @@ export default function SmallCard({ title, stars, price, stock, badge, discount,
             <SlickModal show={show} handleClose={closeModal} title={title}>
                 <Image className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${id}/200/200`} alt="" width={600} height={600} />
             </SlickModal>
-            <Card.Body>
-                <div style={{ minHeight: "110px" }}>
-                    {/* <CategoryBreadcrumb id={id} catId={catId} catTitle={catTitle}
-                        catSubcat={catSubcat} /> */}
-                    <CategoryBreadcrumb />
 
-                    <Card.Title className="mb-1 fw-bold h6">{title}</Card.Title>
+            <Link href="/product/[slug]" as={`/product/${slug}`}>
+                <a className="link-dark mb-0">
+                    <Card.Body>
+                        <div style={{ minHeight: "110px" }}>
+                            <CategoryBreadcrumb catname={catname} subcatname={subcatname} />
 
-                    {stock === 0 ? null :
-                        <Stock stock={stock} />
-                    }
+                            <Card.Title className="mb-1 fw-bold h6">{title}</Card.Title>
 
-                    {stars === 0 ? null :
-                        <Stars stars={stars} />
-                    }
-                </div>
-            </Card.Body>
-            <Card.Footer className="border-0">
-                <Row className="d-flex align-items-center justify-content-between">
-                    <Col>
-                        <Price style="h5" price={price} />
-                    </Col>
-                    <Col className="text-end">
-                        <ActionButton />
-                    </Col>
-                </Row>
-            </Card.Footer>
+                            {stock === 0 ? null :
+                                <Stock stock={stock} />
+                            }
+
+                            {stars === 0 ? null :
+                                <Stars stars={stars} />
+                            }
+                        </div>
+                    </Card.Body>
+                    <Card.Footer className="border-0">
+                        <Row className="d-flex align-items-center justify-content-between">
+                            <Col>
+                                <Price style="h5" price={price} />
+                            </Col>
+                            <Col className="text-end">
+                                <ActionButton />
+                            </Col>
+                        </Row>
+                    </Card.Footer>
+                </a>
+            </Link>
         </Card>
     )
 }

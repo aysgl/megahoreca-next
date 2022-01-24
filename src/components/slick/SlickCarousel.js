@@ -58,14 +58,14 @@ export default function SlickCarousel({ prodata, catdata }) {
                     key={pro.id}
                     title={pro.title.substring(0, 40)}
                     price={pro.price}
-                    // catId={catdata.id}
-                    // catTitle={catdata.title}
-                    // catSubcat={catdata.subcategory}
+                    catname={pro.categoryname}
+                    subcatname={pro.subcategoryname}
                     stars={pro.stars}
                     stock={pro.stock}
                     discount={pro.discount}
                     badge={pro.price}
                     id={pro.catId}
+                    slug={pro.slug}
                 />
             )}
         </Slider>

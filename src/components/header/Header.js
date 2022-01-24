@@ -6,8 +6,12 @@ import logo from "../../images/logo.svg"
 import Megamenu from './Megamenu';
 import { catdata } from "../../data/catdata"
 import Image from "next/image";
+import { useRouter } from 'next/router'
+
 
 export default function Header() {
+    const router = useRouter();
+    const { category } = router.query;
     return (
         <>
             <Navbar bg="white" variant="dark" expand="lg" className="py-0 shadow-sm mb-3" sticky="top" style={{ zIndex: "1046", height: "80px" }}>
@@ -18,11 +22,12 @@ export default function Header() {
                             alt="Megahoreca"
                             width={200}
                             height={80}
+                            unoptimized
                         />
                     </Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className='h-100'>
-                        <Megamenu category={catdata} />
+                        <Megamenu catdata={catdata} />
                         <div className='w-75 d-flex'>
                             <Search />
                             <DropdownProfile />

@@ -51,15 +51,17 @@ export default function FooterSectionBottom() {
                     <Col md={4} xl={2} className="pt-4">
                         <ul className="list-unstyled">
                             <li className="h6 fw-bold pb-2">MegaHoreca.com</li>
-                            <li><a href="#.">Over ons</a></li>
-                            <li><a href="#.">Nieuws van ons</a></li>
+                            <li><a href="/about">Over ons</a></li>
+                            <li><a href="/faq">Faq</a></li>
+                            <li><a href="/service">Our Services</a></li>
+                            {/* <li><a href="#.">Nieuws van ons</a></li>
                             <li><a href="#.">Mededeling</a></li>
                             <li><a href="#.">Gebruikershandleiding</a></li>
                             <li><a href="#.">Mijn account</a></li>
                             <li><a href="#.">Help</a></li>
                             <li><a href="#.">Carrièremogelijkheden</a></li>
                             <li><a href="#.">Bedrijfsblog</a></li>
-                            <li><a href="#.">Bedrijfsnieuws</a></li>
+                            <li><a href="#.">Bedrijfsnieuws</a></li> */}
                         </ul>
                     </Col>
                     <Col md={4} xl={2} className="pt-4">

@@ -6,7 +6,7 @@ export default function FooterTopCategory({ category }) {
             <li className="fw-bold">{category.title}</li>
             {category.subcategory.map(sub =>
                 <li key={sub.id}>
-                    <Link href="/category/[id]" as={`/category/${category.id}`}>
+                    <Link href={`/${sub.slug}`}>
                         <a className='link-dark'>{sub.title}</a>
                     </Link>
                 </li>

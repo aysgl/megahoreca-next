@@ -8,9 +8,11 @@ import SlickModal from "../slick/SlickModal"
 import Image from "next/image"
 import CategoryBreadcrumb from "../slick/CategoryBreadcrumb"
 import Price from "./Price"
+import { prodata } from "../../data/prodata"
+import Link from "next/link"
 
 
-export default function BigCard({ title, stars, price, stock, badge, discount, id }) {
+export default function BigCard({ title, stars, price, stock, badge, discount, id, catname, subcatname, slug }) {
     const [show, setShow] = useState(false);
 
     const closeModal = () => {
@@ -35,34 +37,35 @@ export default function BigCard({ title, stars, price, stock, badge, discount, i
                 <Image className="img-fluid w-100 rounded" src={`https://picsum.photos/id/${id}/800/800`} alt="" width={800} height={800} />
             </SlickModal>
 
-            <Card.Body>
-                <div>
-                    {/* <CategoryBreadcrumb catdata={catdata} /> */}
-                    {/* <CategoryBreadcrumb catdata={catdata == id ? "eşit değil" : catTitle} /> */}
-                    <CategoryBreadcrumb />
+            <Link href="/product/[slug]" as={`/product/${slug}`}>
+                <a className="link-dark mb-0">
+                    <Card.Body>
+                        <div>
+                            <CategoryBreadcrumb catname={catname} subcatname={subcatname} />
+                            <Card.Title as="h3" className="mb-1 fw-bold">{title}</Card.Title>
 
-                    <Card.Title as="h3" className="mb-1 fw-bold">{title}</Card.Title>
+                            {stock === 0 ? null :
+                                <Stock stock={stock} />
+                            }
 
-                    {stock === 0 ? null :
-                        <Stock stock={stock} />
-                    }
+                            {stars === 0 ? null :
+                                <Stars stars={stars} />
+                            }
+                        </div>
+                    </Card.Body>
 
-                    {stars === 0 ? null :
-                        <Stars stars={stars} />
-                    }
-                </div>
-            </Card.Body>
-
-            <Card.Footer className="border-0">
-                <Row className="d-flex align-items-center justify-content-between">
-                    <Col>
-                        <Price style="h3" price={price} />
-                    </Col>
-                    <Col className="text-end">
-                        <ActionButton />
-                    </Col>
-                </Row>
-            </Card.Footer>
+                    <Card.Footer className="border-0">
+                        <Row className="d-flex align-items-center justify-content-between">
+                            <Col>
+                                <Price style="h3" price={price} />
+                            </Col>
+                            <Col className="text-end">
+                                <ActionButton />
+                            </Col>
+                        </Row>
+                    </Card.Footer>
+                </a>
+            </Link>
         </Card>
     )
 }

@@ -1,7 +1,7 @@
 
 export default function Stars({ stars }) {
     return (
-        <div className="text-secondary">
+        <div className="text-secondary mb-2">
             {stars === 1 &&
                 <small>
                     <i className="icon-surface1-51 text-warning" />

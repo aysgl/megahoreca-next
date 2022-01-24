@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Offcanvas, Button, Tab, Row, Col, Nav, Container, Card } from 'react-bootstrap'
 import Link from "next/link"
 
-export default function Megamenu({ category }) {
+export default function Megamenu({ catdata }) {
     const [show, setShow] = useState(false);
     const showDropdown = (e) => {
         setShow(!show);
@@ -10,7 +10,7 @@ export default function Megamenu({ category }) {
     const hideDropdown = e => {
         setShow(false);
     }
-    const url = "category/subcategory/[id]"
+
     return (
         <>
             <Button className='w-25 text-secondary text-uppercase fw-bold h-100 p-0'
@@ -27,13 +27,15 @@ export default function Megamenu({ category }) {
                 onMouseLeave={hideDropdown}
                 style={{ minHeight: "580px", top: "80px" }}>
                 <Offcanvas.Body>
-                    <Tab.Container id="left-tabs-example" defaultActiveKey={category[0].id}>
+                    <Tab.Container id="left-tabs-example"
+                        defaultActiveKey={catdata[0].id}
+                    >
                         <Container>
-                            {category &&
+                            {catdata &&
                                 <Row>
                                     <Col sm={3}>
                                         <Nav variant="pills" className="flex-column">
-                                            {category.map(cat =>
+                                            {catdata.map(cat =>
                                                 <Nav.Item key={cat.id}>
                                                     <Nav.Link eventKey={cat.id} className='position-relative'>
                                                         <img className='rounded mx-2'
@@ -50,17 +52,14 @@ export default function Megamenu({ category }) {
                                     </Col>
                                     <Col sm={9}>
                                         <Tab.Content>
-                                            {category.map(cat =>
+                                            {catdata.map(cat =>
                                                 <Tab.Pane key={cat.id} eventKey={cat.id}>
                                                     <Row style={{ zIndex: "1", position: "relative" }} className='g-2'>
                                                         {cat.subcategory.map(sub =>
-                                                            <Col lg={3} sm={4}>
+                                                            <Col key={sub.id} lg={3} sm={4}>
                                                                 <Card className="category-card text-white">
                                                                     <Card.Img src={cat.img} alt="Card image" />
-                                                                    <Link
-                                                                        href="/category/subcategory/[id]"
-                                                                        as={`/category/subcategory/${sub.id}`}
-                                                                    >
+                                                                    <Link href={`/${sub.slug}`}>
                                                                         <a className='link-dark'>
                                                                             <Card.ImgOverlay className='d-flex align-items-center justify-content-center'>
                                                                                 <Card.Title as="p" className='text-center text-white fw-bold small mb-0'>

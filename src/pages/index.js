@@ -1,14 +1,10 @@
-import Head from 'next/head'
 import Advertisement from '../components/advertisement/Advertisement'
-import PerksBanner from '../components/advertisement/PerksBanner'
 import SlickCarouselSection from '../components/slick/SlickCarouselSection'
 import ReviewCarouselSection from "../components/slick/ReviewCarouselSection"
 import MasonrySection from '../components/MasonrySection'
 import CarouselSection from '../components/carousel/sliderSection'
 import CategoryListSmall from '../components/category/CategoryListSmall'
 import useSWR from 'swr'
-import { Container, Row } from 'react-bootstrap'
-import Seperate from '../components/stuff/Seperate'
 import Meta from '../components/seo/Meta'
 
 const catfetcher = (url) => fetch(url).then((res) => res.json())
@@ -39,7 +35,6 @@ export default function Home() {
           <ReviewCarouselSection title="EERDER BEKEKEN DOOR JOU" prodata={prodata} catdata={catdata} />
         </>
       }
-      <PerksBanner />
     </>
   )
 }
