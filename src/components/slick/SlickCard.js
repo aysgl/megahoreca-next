@@ -41,7 +41,7 @@ const SlickCard = ({ title, stars, price, stock, badge, discount, id, catname, s
             <Link href="/product/[slug]" as={`/product/${slug}`}>
                 <a className="link-dark mb-0">
                     <Card.Body>
-                        <div style={{ minHeight: "110px" }}>
+                        <div style={{ minHeight: "130px" }}>
                             <CategoryBreadcrumb catname={catname} subcatname={subcatname} />
                             <Card.Title className="mb-1 fw-bold h6">{title}</Card.Title>
 

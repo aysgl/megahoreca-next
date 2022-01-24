@@ -119,23 +119,19 @@ export default function CategoryDetails() {
                         <Row className='g-3'>
                             {prodata.filter(x => x.categoryname == category && x.subcategoryname == subcategory).map((pro, i) =>
                                 <Col md={4}>
-                                    <Link href="/product/[slug]" as={`/product/${pro.slug}`} >
-                                        <a className='link-dark'>
-                                            <SlickCard
-                                                key={pro.id}
-                                                title={pro.title.substring(0, 40)}
-                                                price={pro.price}
-                                                catname={pro.categoryname}
-                                                subcatname={pro.subcategoryname}
-                                                stars={pro.stars}
-                                                stock={pro.stock}
-                                                discount={pro.discount}
-                                                badge={pro.price}
-                                                id={pro.catId}
-                                                slug={pro.slug}
-                                            />
-                                        </a>
-                                    </Link>
+                                    <SlickCard
+                                        key={pro.id}
+                                        title={pro.title.substring(0, 40)}
+                                        price={pro.price}
+                                        catname={pro.categoryname}
+                                        subcatname={pro.subcategoryname}
+                                        stars={pro.stars}
+                                        stock={pro.stock}
+                                        discount={pro.discount}
+                                        badge={pro.price}
+                                        id={pro.catId}
+                                        slug={pro.slug}
+                                    />
                                 </Col>
                             )}
                         </Row>
