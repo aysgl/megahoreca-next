@@ -12,6 +12,7 @@ import Seperate from '../../../components/stuff/Seperate';
 import SlickCarouselSection from "../../../components/slick/SlickCarouselSection"
 import ReviewCarouselSection from "../../../components/slick/ReviewCarouselSection"
 import { prodata } from "../../../data/prodata"
+import Meta from '../../../components/seo/Meta';
 
 
 const data = [
@@ -61,6 +62,7 @@ export default function index() {
 
     return (
         <>
+            <Meta title="Project" desc="desc" />
             <Container>
                 {prodata.filter(x => x.slug == slug).map(pro =>
                     <Row>

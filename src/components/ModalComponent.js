@@ -42,9 +42,12 @@ export default function ModalComponent() {
                     <div className="p-3">
                         <div className="text-center">
                             <Card.Title className="card-title mb-1 text-left">Apple iPad (2018) 32GB</Card.Title>
-                            <p className="text-success mb-0 text-left"><small><i style={{ fontSize: "9px" }}
-                                className="icon-Varlk-41 pe-2" />laatste
-                                10 stuks</small></p>
+                            <p className="text-success mb-0 text-left">
+                                <small><i style={{ fontSize: "9px" }}
+                                    className="icon-Varlk-41 pe-2" />laatste
+                                    10 stuks
+                                </small>
+                            </p>
                             <Image className="img-fluid" alt="product" src="../images/product-1b.png" />
                         </div>
                     </div>

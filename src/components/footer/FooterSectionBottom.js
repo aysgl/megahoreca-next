@@ -54,6 +54,8 @@ export default function FooterSectionBottom() {
                             <li><a href="/about">Over ons</a></li>
                             <li><a href="/faq">Faq</a></li>
                             <li><a href="/service">Our Services</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/contact">Contact</a></li>
                             {/* <li><a href="#.">Nieuws van ons</a></li>
                             <li><a href="#.">Mededeling</a></li>
                             <li><a href="#.">Gebruikershandleiding</a></li>

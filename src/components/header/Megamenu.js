@@ -3,19 +3,19 @@ import { Offcanvas, Button, Tab, Row, Col, Nav, Container, Card } from 'react-bo
 import Link from "next/link"
 
 export default function Megamenu({ catdata }) {
-    const [show, setShow] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
     const showDropdown = (e) => {
-        setShow(!show);
+        setShowMenu(!showMenu);
     }
     const hideDropdown = e => {
-        setShow(false);
+        setShowMenu(false);
     }
 
     return (
         <>
             <Button className='w-25 text-secondary text-uppercase fw-bold h-100 p-0'
                 variant="link"
-                show={show}
+                show={showMenu}
                 onMouseEnter={showDropdown}
             >
                 <i style={{ fontSize: "10px" }} className="icon-surface1-38 pe-2"></i> Aan De Slag
@@ -23,13 +23,11 @@ export default function Megamenu({ catdata }) {
 
             <Offcanvas className="mx-auto"
                 placement='top'
-                show={show}
+                show={showMenu}
                 onMouseLeave={hideDropdown}
                 style={{ minHeight: "580px", top: "80px" }}>
                 <Offcanvas.Body>
-                    <Tab.Container id="left-tabs-example"
-                        defaultActiveKey={catdata[0].id}
-                    >
+                    <Tab.Container defaultActiveKey={catdata[0].id}>
                         <Container>
                             {catdata &&
                                 <Row>
@@ -71,17 +69,6 @@ export default function Megamenu({ catdata }) {
                                                                 </Card>
                                                             </Col>
                                                         )}
-
-                                                        {/* <Col md="7" className='text-end'>
-                                                            <Image src={cat.img}
-                                                                className='rounded'
-                                                                alt=""
-                                                                width={650}
-                                                                height={650}
-                                                                // layout='fixed'
-                                                                // unoptimized={true}
-                                                                placeholder="blur" />
-                                                        </Col> */}
                                                     </Row>
                                                 </Tab.Pane>
                                             )}

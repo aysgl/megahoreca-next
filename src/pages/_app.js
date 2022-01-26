@@ -1,11 +1,14 @@
 import Layout from "./layout"
 import '../styles/globals.scss'
+import { SSRProvider } from "react-bootstrap"
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout title="abc">
-      <Component {...pageProps} />
-    </Layout>
+    <SSRProvider>
+      <Layout title="abc">
+        <Component {...pageProps} />
+      </Layout>
+    </SSRProvider>
   )
 }
 

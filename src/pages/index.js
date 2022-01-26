@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <>
-      <Meta title="home title" desc="desc" />
+      <Meta title="Home" desc="desc" />
       <CarouselSection />
       {prodata && catdata &&
         <>

@@ -7,7 +7,7 @@ import Megamenu from './Megamenu';
 import { catdata } from "../../data/catdata"
 import Image from "next/image";
 import { useRouter } from 'next/router'
-
+import dynamic from 'next/dynamic'
 
 export default function Header() {
     const router = useRouter();

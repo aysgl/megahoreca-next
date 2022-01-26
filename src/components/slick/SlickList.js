@@ -44,32 +44,29 @@ const SlickCard = ({ title, stars, price, stock, id, catname, subcatname, slug }
                         {stars === 0 ? null :
                             <Stars stars={stars} />
                         }
-                        <Card.Text>
-                            <Row>
-                                <Col md={8} className='border-end'>
-                                    <ListGroup className="list-group-flush small">
-                                        <ListGroupItem className="d-flex justify-content-between px-0">
-                                            <span>product variant 1 :</span> <span>info</span>
-                                        </ListGroupItem>
-                                        <ListGroupItem className="d-flex justify-content-between px-0">
-                                            <span>product variant 2 :</span> <span>info</span>
-                                        </ListGroupItem>
-                                        <ListGroupItem className="d-flex justify-content-between px-0">
-                                            <Link href="/product/[slug]" as={`/product/${slug}`}>
-                                                <a className="link-primary">
-                                                    more</a>
-                                            </Link>
-                                        </ListGroupItem>
-                                    </ListGroup>
-                                </Col>
-                                <Col md={4}>
-                                    <Price style={"h2"} price={price} />
-                                    <Counter />
-                                    <ActionButton />
-                                </Col>
-                            </Row>
-
-                        </Card.Text>
+                        <Row>
+                            <Col md={8} className='border-end'>
+                                <ListGroup className="list-group-flush small">
+                                    <ListGroupItem className="d-flex justify-content-between px-0">
+                                        <span>product variant 1 :</span> <span>info</span>
+                                    </ListGroupItem>
+                                    <ListGroupItem className="d-flex justify-content-between px-0">
+                                        <span>product variant 2 :</span> <span>info</span>
+                                    </ListGroupItem>
+                                    <ListGroupItem className="d-flex justify-content-between px-0">
+                                        <Link href="/product/[slug]" as={`/product/${slug}`}>
+                                            <a className="link-primary">
+                                                more</a>
+                                        </Link>
+                                    </ListGroupItem>
+                                </ListGroup>
+                            </Col>
+                            <Col md={4}>
+                                <Price style={"h2"} price={price} />
+                                <Counter />
+                                <ActionButton />
+                            </Col>
+                        </Row>
                     </Card.Body>
                 </Col>
             </Row>

@@ -40,8 +40,8 @@ export default function DropdownProfile() {
                     </div>
                 </Form>
                 <Dropdown.Divider />
-                <Dropdown.Item><a>Ben je nieuw hier? Schrijf je in!</a></Dropdown.Item>
-                <Dropdown.Item><a>Wachtwoord vergeten?</a></Dropdown.Item>
+                <Dropdown.Item>Ben je nieuw hier? Schrijf je in!</Dropdown.Item>
+                <Dropdown.Item>Wachtwoord vergeten?</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
     )
