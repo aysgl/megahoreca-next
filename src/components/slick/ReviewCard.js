@@ -12,7 +12,7 @@ export default function ReviewCard({ badge, title, id, price }) {
                     </div>
                 }
                 <div className="position-relative">
-                    <Image className="img-fluid rounded" src={`https://picsum.photos/id/${id}/200/200`} alt="" width={200} height={200} />
+                    <Image className="img-fluid rounded" src={`https://picsum.photos/id/${id}/300/300`} alt="" width={300} height={300} />
                 </div>
                 <Card.Body className="pb-0">
                     <Card.Title className="mb-1 fw-bold small" style={{ minHeight: "36px" }}>{title}</Card.Title>
