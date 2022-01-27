@@ -19,38 +19,32 @@ const data = [
     {
         id: 1,
         title: "repellendus id ullam",
-        label: "Dolorem officiis temporibus.",
         image: "https://picsum.photos/800/600?random=1"
     },
     {
         id: 2,
         title: "excepturi consequatur est",
-        label: "Officia non provident dolor esse et neque.",
         image: "https://picsum.photos/800/600?random=2"
     },
     {
         id: 3,
         title: "eius doloribus blanditiis",
-        label: "Ut recusandae vel vitae molestiae id soluta.",
         image: "https://picsum.photos/800/600?random=3"
     },
 
     {
         id: 4,
         title: "repellendus id ullam",
-        label: "Dolorem officiis temporibus.",
         image: "https://picsum.photos/800/600?random=4"
     },
     {
         id: 5,
         title: "excepturi consequatur est",
-        label: "Officia non provident dolor esse et neque.",
         image: "https://picsum.photos/800/600?random=5"
     },
     {
         id: 6,
         title: "eius doloribus blanditiis",
-        label: "Ut recusandae vel vitae molestiae id soluta.",
         image: "https://picsum.photos/800/600?random=6"
     }
 ];
