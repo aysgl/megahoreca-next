@@ -5,7 +5,7 @@ import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
 import Seperate from "../../../components/stuff/Seperate";
 import SocialShare from "../../../components/stuff/SocialShare"
 
-export default function Blog(props) {
+export default function Blog() {
     const router = useRouter();
     const { blog, testid } = router.query;
 

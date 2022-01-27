@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import Seperate from "../../components/stuff/Seperate";
 
-export default function BlogsPage() {
+export default function Blog() {
     return (
         <Container>
             <Row className="g-3">

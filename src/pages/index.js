@@ -5,7 +5,6 @@ import MasonrySection from '../components/MasonrySection'
 import CarouselSection from '../components/carousel/sliderSection'
 import CategoryListSmall from '../components/category/CategoryListSmall'
 import useSWR from 'swr'
-import Meta from '../components/seo/Meta'
 
 const catfetcher = (url) => fetch(url).then((res) => res.json())
 const profetcher = (url) => fetch(url).then((res) => res.json())
@@ -23,7 +22,6 @@ export default function Home() {
 
   return (
     <>
-      <Meta title="Home" desc="desc" />
       <CarouselSection />
       {prodata && catdata &&
         <>

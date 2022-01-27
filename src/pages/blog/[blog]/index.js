@@ -4,16 +4,17 @@ import Link from "next/link";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import Seperate from "../../../components/stuff/Seperate";
 import SocialShare from "../../../components/stuff/SocialShare"
+import { metadata } from "../../../data/metadata";
 
-export default function BlogsPage(props) {
+export default function Blog() {
     const router = useRouter();
     const { blog, testid } = router.query;
+
 
     return (
         <>
             {post.filter(x => x.slug == "blog/" + blog).map((po, i) =>
                 <Container>
-
                     <Card className="h-100" key={po.id} style={{ marginTop: "3rem", marginRight: "2rem" }}>
                         <Row md={4} style={{ marginTop: "-2rem", marginRight: "-2rem" }} className="g-0">
                             <Col md={11} className="ms-auto">
@@ -23,7 +24,9 @@ export default function BlogsPage(props) {
                                 <Card.Body>
                                     <Card.Title as="h2">{po.title}</Card.Title>
                                     <Card.Text>{po.body}</Card.Text>
-                                    <SocialShare url={po.url} hashtag={[po.title]} desc={po.body} />
+                                    {metadata.filter(x => x.page == "/blog").map(m =>
+                                        <SocialShare url={po.slug} img={m.s_img} hashtag={[m.s_hastag]} title={m.s_title} desc={m.s_desc} />
+                                    )}
                                 </Card.Body>
                             </Col>
                         </Row>

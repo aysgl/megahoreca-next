@@ -45,92 +45,88 @@ export default function Contact() {
     };
 
     return (
-        <>
-            <Meta title="Contact" desc="desc" />
-            <Row>
-                <Col md={6} className='mx-auto'>
-                    <Container>
-                        <div className='shadow rounded p-5'>
-                            <h2>Contact page!</h2>
+        <Row>
+            <Col md={6} className='mx-auto'>
+                <Container>
+                    <div className='shadow rounded p-5'>
+                        <h2>Contact page!</h2>
 
-                            {showModal ?
-                                <div>
-                                    Merhaba <span className='fw-bold'>{name} {surname} </span>
-                                    bilgileriniz başarıyla gönderildi!
+                        {showModal ?
+                            <div>
+                                Merhaba <span className='fw-bold'>{name} {surname} </span>
+                                bilgileriniz başarıyla gönderildi!
 
-                                </div> :
-                                <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                                    <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="First name"
-                                        className="mb-3"
-                                    >
-                                        <Form.Control required
-                                            type="text"
-                                            placeholder="First name"
-                                            onChange={handleNameChange}
-                                            value={name} />
-                                    </FloatingLabel>
+                            </div> :
+                            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                                <FloatingLabel
+                                    controlId="floatingInput"
+                                    label="First name"
+                                    className="mb-3"
+                                >
+                                    <Form.Control required
+                                        type="text"
+                                        placeholder="First name"
+                                        onChange={handleNameChange}
+                                        value={name} />
+                                </FloatingLabel>
 
-                                    <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Last name"
-                                        className="mb-3"
-                                    >
-                                        <Form.Control required
-                                            type="text"
-                                            placeholder="Last name"
-                                            onChange={handleSurnameChange}
-                                            value={surname} />
-                                    </FloatingLabel>
+                                <FloatingLabel
+                                    controlId="floatingInput"
+                                    label="Last name"
+                                    className="mb-3"
+                                >
+                                    <Form.Control required
+                                        type="text"
+                                        placeholder="Last name"
+                                        onChange={handleSurnameChange}
+                                        value={surname} />
+                                </FloatingLabel>
 
-                                    <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Email"
-                                        className="mb-3"
-                                    >
-                                        <Form.Control required
-                                            type="text"
-                                            placeholder="Email"
-                                            onChange={handleEmailChange}
-                                            value={email} />
-                                    </FloatingLabel>
+                                <FloatingLabel
+                                    controlId="floatingInput"
+                                    label="Email"
+                                    className="mb-3"
+                                >
+                                    <Form.Control required
+                                        type="text"
+                                        placeholder="Email"
+                                        onChange={handleEmailChange}
+                                        value={email} />
+                                </FloatingLabel>
 
-                                    <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Messages"
-                                        className="mb-3"
-                                    >
-                                        <Form.Control type="text"
-                                            as="textarea"
-                                            placeholder="Messages"
-                                            onChange={handleMessagesChange}
-                                            value={messages}
-                                            required style={{ height: '100px' }} />
-                                    </FloatingLabel>
+                                <FloatingLabel
+                                    controlId="floatingInput"
+                                    label="Messages"
+                                    className="mb-3"
+                                >
+                                    <Form.Control type="text"
+                                        as="textarea"
+                                        placeholder="Messages"
+                                        onChange={handleMessagesChange}
+                                        value={messages}
+                                        required style={{ height: '100px' }} />
+                                </FloatingLabel>
 
 
-                                    <Form.Group className='mb-3' controlId='validationCustom04'>
-                                        <Form.Check
-                                            required
-                                            label="Agree to terms and conditions"
-                                            feedback="You must agree before submitting."
-                                            feedbackType="invalid"
-                                            onChange={handleCheckboxChange}
-                                            checked={checkbox}
-                                        />
-                                    </Form.Group>
-                                    <div className='d-flex justify-content-end'>
-                                        <Button type="submit" disabled={!name || !surname || !messages || !checkbox} onClick={() => setShowModal(true)}>Send</Button>
-                                    </div>
-                                </Form>
-                            }
-                        </div>
-                        <Seperate />
-                    </Container>
-                </Col>
-            </Row>
-
-        </>
+                                <Form.Group className='mb-3' controlId='validationCustom04'>
+                                    <Form.Check
+                                        required
+                                        label="Agree to terms and conditions"
+                                        feedback="You must agree before submitting."
+                                        feedbackType="invalid"
+                                        onChange={handleCheckboxChange}
+                                        checked={checkbox}
+                                    />
+                                </Form.Group>
+                                <div className='d-flex justify-content-end'>
+                                    <Button type="submit" disabled={!name || !surname || !messages || !checkbox} onClick={() => setShowModal(true)}>Send</Button>
+                                </div>
+                            </Form>
+                        }
+                    </div>
+                    <Seperate />
+                </Container>
+            </Col>
+        </Row>
     )
 }
