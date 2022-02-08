@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Container, Dropdown, Button } from "react-bootstrap";
+import { Container, Dropdown, Button, Badge } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux"
 
 export default function DropdownCart() {
     const [show, setShow] = useState(false);
@@ -9,6 +10,8 @@ export default function DropdownCart() {
     const hideDropdown = e => {
         setShow(false);
     }
+
+    const { cart } = useSelector(state => state.products)
     return (
         <Dropdown
             align={"end"}
@@ -19,6 +22,7 @@ export default function DropdownCart() {
         >
             <Dropdown.Toggle variant="outline-primary">
                 <i className="icon-surface1-36" />
+                <Badge>{cart.length}</Badge>
             </Dropdown.Toggle>
             <Dropdown.Menu style={{ minWidth: "20rem" }}>
                 <Dropdown.Header>MIJN WINKELMAND</Dropdown.Header>

@@ -8,6 +8,7 @@ module.exports = withImages({
         ignoreDuringBuilds: true,
     },
     images: {
-        domains: ['picsum.photos']
+        domains: ['picsum.photos'],
+        disableStaticImages: true
     }
 });

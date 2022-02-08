@@ -14,7 +14,7 @@ export default function CategoryList({ catdata }) {
                                 <Image className='rounded'
                                     width={40}
                                     height={40}
-                                    placeholder="blur"
+                                    // placeholder="blur"
                                     layout='intrinsic'
                                     src={cat.icon} alt="" />
                             </div>

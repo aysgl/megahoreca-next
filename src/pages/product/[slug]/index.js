@@ -7,11 +7,14 @@ import Stars from '../../../components/product/Stars';
 import Stock from '../../../components/product/Stock';
 import CategoryBreadcrumb from '../../../components/slick/CategoryBreadcrumb';
 import SlickGallery from '../../../components/slick/SlickGallery';
-import Counter from '../../../components/stuff/Counter';
+import Counter from '../../../components/cart/Counter';
 import Seperate from '../../../components/stuff/Seperate';
 import SlickCarouselSection from "../../../components/slick/SlickCarouselSection"
 import ReviewCarouselSection from "../../../components/slick/ReviewCarouselSection"
 import { prodata } from "../../../data/prodata"
+import { useDispatch, useSelector } from "react-redux"
+import products, { getProductDetail } from '../../../store/products';
+import { useEffect } from 'react';
 
 const data = [
     {
@@ -47,14 +50,22 @@ const data = [
     }
 ];
 
-export default function index() {
+export default function index({ match }) {
     const router = useRouter();
     const { slug } = router.query;
+
+    // const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getProductDetail(match.params.id))
+    }, [match, dispatch])
+    const { product, cart } = useSelector(state => state.products)
+    const { id, image, name, price, quantity } = product
 
     return (
         <>
             <Container>
-                {prodata.filter(x => x.slug == slug).map(pro =>
+                {product.filter(x => x.slug == slug).map(pro =>
                     <Row>
                         <Col md={6}>
                             <SlickGallery data={data} />

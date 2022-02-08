@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Slider from "react-slick";
 import SlickCard from "./SlickCard";
-import axios from "axios";
+import { useSelector } from "react-redux"
 
 export default function SlickCarousel({ prodata, catdata }) {
     // const [products, setProducts] = useState(null);
@@ -13,6 +13,8 @@ export default function SlickCarousel({ prodata, catdata }) {
     // }, []);
 
     // if (!products) return null;
+
+    const { product } = useSelector(state => state.products)
 
     const settings = {
         infinite: true,
@@ -53,7 +55,7 @@ export default function SlickCarousel({ prodata, catdata }) {
 
     return (
         <Slider {...settings}>
-            {prodata.map((pro, i) =>
+            {product.map((pro, i) =>
                 <SlickCard
                     key={pro.id}
                     title={pro.title.substring(0, 40)}
